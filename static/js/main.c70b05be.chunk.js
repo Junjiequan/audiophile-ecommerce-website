@@ -1,2 +1,0 @@
-(this["webpackJsonpaudiophile-ecommerce-website"]=this["webpackJsonpaudiophile-ecommerce-website"]||[]).push([[0],{9:function(d,e,l){"use strict";l.r(e);var t=l(0),c=l.n(t),i=l(3),n=l.n(i),o=l(1),r=function(){return Object(o.jsx)("div",{children:"Hellllllllllllloddddddddddddddddddddddddddddddd"})};n.a.render(Object(o.jsx)(c.a.StrictMode,{children:Object(o.jsx)(r,{})}),document.getElementById("root"))}},[[9,1,2]]]);
-//# sourceMappingURL=main.c70b05be.chunk.js.map
