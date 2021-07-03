@@ -38,6 +38,9 @@ export const ProductListItem = Styled.div`
     &:hover:before{
         animation: ${ANIMATION.jelloHorizontal} 0.9s both;
     }
+    &:nth-child(2){
+        margin:0 1rem;
+    }
 `
 export const ProductTitle = Styled.span`
     pointer-events:none;

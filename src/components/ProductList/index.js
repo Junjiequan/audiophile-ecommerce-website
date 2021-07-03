@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {
     ProductListWrapper,
     ProductListItem,
@@ -11,7 +11,6 @@ import headphone from '../../assets/shared/desktop/image-headphones.png';
 
 
 const ProductList = () => {
-
     return (
         <ProductListWrapper>
             <ProductListItem productImage={headphone}>

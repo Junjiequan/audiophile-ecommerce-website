@@ -58,7 +58,7 @@ export const HeroImgWrapper = Styled.div`
     background-position:54%;
     opacity:1;
     transition:opacity ${TRANSITION.ease};
-    animation:${ANIMATION.flashy} 3s ease-in-out 1;
+    animation:${ANIMATION.flashy} 4.8s ease-in-out 1;
     animation-delay:.5s;
 `
 export const HeroImg = Styled.img`

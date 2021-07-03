@@ -4,16 +4,20 @@ import { keyframes } from 'styled-components'
 export const ANIMATION = {
     flashy:keyframes`
         15%{opacity:0.4}
-        18%{opacity:0.2}
-        21%{opacity:0.4}
-        24%{opacity:0.2}
+        17%{opacity:0.2}
+        19%{opacity:0.4}
+        21%{opacity:0.2}
+        23%{opacity:0.4}
+        25%{opacity:0.2}
         27%{opacity:0.4}
-        30%{opacity:0.2}
-        33%{opacity:0.4}
-        36%{opacity:0.2}
+        29%{opacity:0.2}
+        31%{opacity:0.4}
+        33%{opacity:0.2}
+        35%{opacity:0.4}
+        37%{opacity:0.2}
         39%{opacity:0.4}
-        44%{opacity:0.1}
-        100%{opacity:1}
+        43%{opacity:0.1}
+        75%{opacity:1}
     `,
     jelloHorizontal:keyframes`
         0% {transform: scale3d(1, 1, 1);}
