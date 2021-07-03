@@ -8,25 +8,22 @@ import{
     HeaderNav,
     HeaderNavLink
 } from './HeaderElements';
+import Logo from '../../assets/shared/desktop/logo.svg'
 
 const Header = () => {
     return (
-        <HeaderContainer>
-            <HeaderWrapper>
-                
+        <HeaderContainer bgColor={`transparent`}>
+            <HeaderWrapper borderBot={true}>
                 <HeaderLogo>
-                    <LogoImg />
+                    <LogoImg src={Logo} />
                 </HeaderLogo>
-
                 <HeaderNav>
-                    <HeaderNavLink>home</HeaderNavLink>
-                    <HeaderNavLink>headphones</HeaderNavLink>
-                    <HeaderNavLink>speakers</HeaderNavLink>
-                    <HeaderNavLink>earphones</HeaderNavLink>
+                    <HeaderNavLink tabIndex="0" aria-current="">home</HeaderNavLink>
+                    <HeaderNavLink tabIndex="0" aria-current="">headphones</HeaderNavLink>
+                    <HeaderNavLink tabIndex="0" aria-current="">speakers</HeaderNavLink>
+                    <HeaderNavLink tabIndex="0" aria-current="">earphones</HeaderNavLink>
                 </HeaderNav>
-
                 <Cart />
-
             </HeaderWrapper>
         </HeaderContainer>
     )

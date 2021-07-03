@@ -1,10 +1,15 @@
 import React from 'react'
+import {
+    CartWrapper,
+    CartIcon
+} from './CartElements'
+import CartImg from '../../assets/shared/desktop/icon-cart.svg'
 
 const Cart = () => {
     return (
-        <div>
-            
-        </div>
+        <CartWrapper>
+            <CartIcon src={CartImg}/>
+        </CartWrapper>
     )
 }
 

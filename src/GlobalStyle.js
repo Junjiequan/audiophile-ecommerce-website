@@ -14,8 +14,9 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     /* For keyboard user*/
-    *:focus-visible{
-        outline: 2px dashed rgba(90, 119, 255, 1) ;
+    *:focus-visible
+    {
+        outline: 2px dashed rgba(216,125,74, 1) ;
         outline-offset: 5px ;
         transition:all .3s ease;
     }
@@ -36,6 +37,7 @@ const GlobalStyle = createGlobalStyle`
     button{
         padding:0;
         border:0;
+        background:transparent;
     }
 
     /* Set core root defaults */
@@ -48,10 +50,12 @@ const GlobalStyle = createGlobalStyle`
     body {
         min-height: 100vh;
         text-rendering: optimizeSpeed;
-        line-height: 1.5;
-        background: hsl(0, 0%, 100%);
+        line-height: 2.5rem;
+        letter-spacing: .1rem;
+        font-size:1.5rem;
+        background: hsl(0, 0%, 5%);
         overflow-x: hidden;
-        font-family:'DM Sans','arial';
+        font-family:'MANROPE','arial';
     }
     /* Make images easier to work with */
     img,
@@ -82,6 +86,46 @@ const GlobalStyle = createGlobalStyle`
             transition-duration: 0.01ms !important;
             scroll-behavior: auto !important;
         }
+    }
+
+    /********************
+        Typography
+    *********************/
+    h1{
+        font-size:5.6rem;
+        line-height:5.8rem;
+        letter-spacing:.2rem;
+        text-transform: uppercase;
+    }
+    h2{
+        font-size:4rem;
+        line-height:4.4rem;
+        letter-spacing:.15rem;
+        text-transform: uppercase;
+    }
+    h3{
+        font-size:2.8rem;
+        line-height:3.8rem;
+        letter-spacing:.2rem;
+        text-transform: uppercase;
+    }
+    h4{
+        font-size:2.4rem;
+        line-height:3.3rem;
+        letter-spacing:.2rem;
+        text-transform: uppercase;
+    }
+    h5{
+        font-size:2.4rem;
+        line-height:3.3rem;
+        letter-spacing:.17rem;
+        text-transform: uppercase;
+    }
+    h6{
+        font-size:1.8rem;
+        line-height:2.4rem;
+        letter-spacing:.13em;
+        text-transform: uppercase;
     }
 `
 export default GlobalStyle
