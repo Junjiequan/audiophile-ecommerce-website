@@ -15,20 +15,27 @@ export const GlobalBtnBrown = Styled.button`
     transition: background-color ${TRANSITION.ease};
     position:relative;
     &:before{
-        content:attr(data-text);
+        content:'';
         position:absolute;
         height:100%;
         width:100%;
+        bottom:0;
         display:flex;
         justify-content:center;
         align-items:center;
         white-space: nowrap;
+        background-size:100% 100%;
         background-color:${COLORS.brownDark};
-        transition:width ${TRANSITION.ease};
+        transition:height ${TRANSITION.ease};
+    }
+    &:after{
+        position:absolute;
+        content:attr(data-text);
     }
     &:hover:before{
-        width:0;
+        height:0;
     }
-
-
+    &:active{
+        transform:translateY(2px);
+    }
 `

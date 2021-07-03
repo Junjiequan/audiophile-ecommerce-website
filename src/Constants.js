@@ -10,7 +10,8 @@ export const COLORS={
 }
 
 export const SPACE={
-    wrapper:`0 2.4rem`,
+    navContainer:`3.2rem 2.4rem 3.6rem 2.4rem`,
+    container:`0 2.4rem`,
     navHeight:`9.6rem`,
 }
 

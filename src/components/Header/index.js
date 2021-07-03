@@ -18,10 +18,10 @@ const Header = () => {
                     <LogoImg src={Logo} />
                 </HeaderLogo>
                 <HeaderNav>
-                    <HeaderNavLink tabIndex="0" aria-current="">home</HeaderNavLink>
-                    <HeaderNavLink tabIndex="0" aria-current="">headphones</HeaderNavLink>
-                    <HeaderNavLink tabIndex="0" aria-current="">speakers</HeaderNavLink>
-                    <HeaderNavLink tabIndex="0" aria-current="">earphones</HeaderNavLink>
+                    <HeaderNavLink tabIndex="0" >home</HeaderNavLink>
+                    <HeaderNavLink tabIndex="0" >headphones</HeaderNavLink>
+                    <HeaderNavLink tabIndex="0" >speakers</HeaderNavLink>
+                    <HeaderNavLink tabIndex="0" >earphones</HeaderNavLink>
                 </HeaderNav>
                 <Cart />
             </HeaderWrapper>

@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { COLORS } from './Constants'
 
 const GlobalStyle = createGlobalStyle`
     /* Set default font size */
@@ -53,7 +54,7 @@ const GlobalStyle = createGlobalStyle`
         line-height: 2.5rem;
         letter-spacing: .1rem;
         font-size:1.5rem;
-        background: hsl(0, 0%, 5%);
+        background: ${COLORS.grayLight};
         overflow-x: hidden;
         font-family:'MANROPE','arial';
     }

@@ -22,7 +22,7 @@ export const HeaderContainer = Styled.header`
     background:${prop=> prop.bgColor};
     display:flex;
     justify-content:center;
-    padding:3.2rem 0 3.6rem;
+    padding:${SPACE.navContainer};
     z-index:2;
 `
 export const HeaderWrapper = Styled.div`

@@ -1,6 +1,22 @@
-import Styled from 'styled-components'
+import Styled, { keyframes } from 'styled-components'
 import HeroBg from '../../assets/home/desktop/image-hero.jpg'
-import { SPACE, WIDTH, COLORS, FONT } from '../../Constants'
+import { SPACE, WIDTH, COLORS, FONT, TRANSITION } from '../../Constants'
+
+const animation = {
+    flashy:keyframes`
+        15%{opacity:0.4}
+        18%{opacity:0.2}
+        21%{opacity:0.4}
+        24%{opacity:0.2}
+        27%{opacity:0.4}
+        30%{opacity:0.2}
+        33%{opacity:0.4}
+        36%{opacity:0.2}
+        39%{opacity:0.4}
+        42%{opacity:0.2}
+        100%{opacity:1}
+    `
+}
 
 
 export const HeroContainer = Styled.section`
@@ -9,9 +25,9 @@ export const HeroContainer = Styled.section`
     height:72.8rem;
     background:${COLORS.blackStupid};
     z-index:1;
+    padding:${SPACE.container};
 `
 export const HeroWrapper = Styled.div`
-    margin:${SPACE.wrapper};
     max-width:${WIDTH.desktop};
     width:100%;
     display:flex;
@@ -54,6 +70,9 @@ export const HeroImgWrapper = Styled.div`
     background-size:120% ;
     background-repeat:no-repeat;
     background-position:54%;
+    opacity:1;
+    transition:opacity ${TRANSITION.ease};
+    animation:${animation.flashy} 3s ease-in-out 1;
 `
 export const HeroImg = Styled.img`
     display:none;
