@@ -12,7 +12,6 @@ export const COLORS={
 export const SPACE={
     wrapper:`0 2.4rem`,
     navHeight:`9.6rem`,
-    heroDesktop:`72.8rem`
 }
 
 export const WIDTH={

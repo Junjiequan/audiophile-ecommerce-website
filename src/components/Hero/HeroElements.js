@@ -6,7 +6,7 @@ import { SPACE, WIDTH, COLORS, FONT } from '../../Constants'
 export const HeroContainer = Styled.section`
     display:flex;
     justify-content:center;
-    height:${SPACE.heroDesktop };
+    height:72.8rem;
     background:${COLORS.blackStupid};
     z-index:1;
 `
