@@ -36,8 +36,15 @@ export const FONT={
     `,
     subtitle:`
         font-size:1.3rem;
+        font-weight:700;
         text-transform:uppercase;
         line-height:2.5rem;
         letter-spacing:.1rem;
+    `,
+    menutitle:`
+        font-size:1.8rem;
+        font-weight:700;
+        letter-spacing:.12;
+        text-transform:uppercase;
     `
 }

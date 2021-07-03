@@ -15,7 +15,7 @@ const Header = () => {
         <HeaderContainer bgColor={`transparent`}>
             <HeaderWrapper borderBot={true}>
                 <HeaderLogo>
-                    <LogoImg src={Logo} />
+                    <LogoImg src={Logo} alt="audiophile logo"/>
                 </HeaderLogo>
                 <HeaderNav>
                     <HeaderNavLink tabIndex="0" >home</HeaderNavLink>

@@ -1,5 +1,8 @@
 import Styled from 'styled-components';
-import { COLORS, TRANSITION } from './Constants'
+import { Link as LinkR } from 'react-router-dom';
+import { COLORS, TRANSITION, FONT } from './Constants'
+import arrowIcon from './assets/shared/desktop/icon-arrow-right.svg'
+import { ProductListItem, } from './components/ProductList/ProductListElements'
 
 export const GlobalBtnBrown = Styled.button`
     display:flex;
@@ -35,7 +38,46 @@ export const GlobalBtnBrown = Styled.button`
     &:hover:before{
         height:0;
     }
+    &:focus-visible:before{
+        height:0;
+    }
     &:active{
         transform:translateY(2px);
+    }
+`
+export const GlobalArrowBtn = Styled(LinkR)`
+    pointer-events:none;
+    display:flex;
+    align-items:center;
+    width:5.7rem;
+    height:1.8rem;
+    ${FONT.subtitle};
+    position:relative;
+    transition: color ${TRANSITION.ease};
+    &:before{
+        position:absolute;
+        content:attr(data-text);
+        left:0;
+    }
+    &:after{
+        content:url(${arrowIcon});
+        position:absolute;
+        right:0;top:.1rem;bottom:0;
+        display:flex;
+        align-items:center;
+        height:100%;
+        transition: right ${TRANSITION.ease};
+    };
+    ${ProductListItem}:hover &{
+        color:${COLORS.brownDark};
+    }
+    ${ProductListItem}:hover &:after{
+        right:-0.7rem;
+    }
+    &:focus-visible{
+        color:${COLORS.brownDark};
+    }
+    &:focus-visible:after{
+        right:-0.7rem;
     }
 `

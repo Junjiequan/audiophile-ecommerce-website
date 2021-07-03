@@ -8,7 +8,7 @@ import CartImg from '../../assets/shared/desktop/icon-cart.svg'
 const Cart = () => {
     return (
         <CartWrapper>
-            <CartIcon src={CartImg}/>
+            <CartIcon src={CartImg} alt="cart icon image"/>
         </CartWrapper>
     )
 }
