@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/audiophile-ecommerce-website/static/js/main.cc23fa66.chunk.js",
-    "main.js.map": "/audiophile-ecommerce-website/static/js/main.cc23fa66.chunk.js.map",
+    "main.js": "/audiophile-ecommerce-website/static/js/main.451956a6.chunk.js",
+    "main.js.map": "/audiophile-ecommerce-website/static/js/main.451956a6.chunk.js.map",
     "runtime-main.js": "/audiophile-ecommerce-website/static/js/runtime-main.e958b9fd.js",
     "runtime-main.js.map": "/audiophile-ecommerce-website/static/js/runtime-main.e958b9fd.js.map",
     "static/css/2.ec02d681.chunk.css": "/audiophile-ecommerce-website/static/css/2.ec02d681.chunk.css",
@@ -15,14 +15,16 @@
     "static/media/image-earphones.6e8830d4.png": "/audiophile-ecommerce-website/static/media/image-earphones.6e8830d4.png",
     "static/media/image-headphones.fbd401d9.png": "/audiophile-ecommerce-website/static/media/image-headphones.fbd401d9.png",
     "static/media/image-hero.55c18e98.jpg": "/audiophile-ecommerce-website/static/media/image-hero.55c18e98.jpg",
+    "static/media/image-speaker-zx7.3d4940e8.jpg": "/audiophile-ecommerce-website/static/media/image-speaker-zx7.3d4940e8.jpg",
     "static/media/image-speaker-zx9.153cd899.png": "/audiophile-ecommerce-website/static/media/image-speaker-zx9.153cd899.png",
     "static/media/image-speakers.bbb1a70b.png": "/audiophile-ecommerce-website/static/media/image-speakers.bbb1a70b.png",
-    "static/media/logo.e03974f8.svg": "/audiophile-ecommerce-website/static/media/logo.e03974f8.svg"
+    "static/media/logo.e03974f8.svg": "/audiophile-ecommerce-website/static/media/logo.e03974f8.svg",
+    "static/media/pattern-circles.f4df3610.svg": "/audiophile-ecommerce-website/static/media/pattern-circles.f4df3610.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.e958b9fd.js",
     "static/css/2.ec02d681.chunk.css",
     "static/js/2.ff0e3566.chunk.js",
-    "static/js/main.cc23fa66.chunk.js"
+    "static/js/main.451956a6.chunk.js"
   ]
 }
