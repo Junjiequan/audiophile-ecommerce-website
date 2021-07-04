@@ -52,7 +52,6 @@ const GlobalStyle = createGlobalStyle`
         min-height: 100vh;
         text-rendering: optimizeSpeed;
         line-height: 2.5rem;
-        letter-spacing: .1rem;
         font-size:1.5rem;
         background: ${COLORS.grayLight};
         overflow-x: hidden;

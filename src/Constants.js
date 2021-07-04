@@ -6,6 +6,7 @@ export const COLORS={
     white:`rgba(255,255,255,1.0)`,
     blackLight:`rgba(16,16,16,1.0)`,
     blackStupid:`rgba(25,25,25,1.0)`,
+    blackStupid2:`rgba(79,79,79,1.0)`,
     black:`rgba(0,0,0,1.0)`
 }
 
@@ -23,10 +24,19 @@ export const TRANSITION={
     ease:`.3s ease`,
     easeIn:`.3s ease-in`,
     easeOut:`.3s ease-out`,
-    easeInOut:`.3s ease-in-out`
+    easeInOut:`.3s ease-in-out`,
+    easeFast:`.2s ease`,
 }
 
 export const FONT={
+    mainProductTitle:`
+        font-size:5.6rem;
+        line-height:5.8rem;
+        font-weight:700;
+        letter-spacing:.2rem;
+        text-transform: uppercase;
+        white-space:wrap;
+    `,
     overline:`
         font-size:1.4rem;
         text-transform:uppercase;

@@ -6,8 +6,7 @@ import{
     HeroTitle,
     HeroProductName,
     HeroInfo,
-    HeroImgWrapper,
-    HeroImg
+    HeroImg,
 } from './HeroElements'
 import {GlobalBtnBrown} from '../../GlobalBtn'
 const Hero = () => {
@@ -15,17 +14,23 @@ const Hero = () => {
         <HeroContainer>
             <HeroWrapper>
                 <HeroDesc>
-                    <HeroTitle>new product</HeroTitle>
-                    <HeroProductName>XX99 Mark II Headphones</HeroProductName>
-                    <HeroInfo>
+                    <HeroTitle data-aos="fade-down" data-aos-duration="500">new product</HeroTitle>
+                    <HeroProductName data-aos="fade-right" data-aos-duration="1100" data-aos-delay="650">
+                        XX99 Mark II Headphones
+                    </HeroProductName>
+                    <HeroInfo data-aos="zoom-in-out" data-aos-delay="1400" data-aos-duration="1100">
                         Experience natural, lifelike audio and exceptional 
                         build quality made for the passionate music enthusiast.
                     </HeroInfo>
-                    <GlobalBtnBrown data-text="see product" aria-label="link to product page"/>
+                    <GlobalBtnBrown 
+                        data-aos="zoom-out" 
+                        data-aos-delay="1800" 
+                        data-aos-duration="700" 
+                        data-text="see product" 
+                        aria-label="link to product page"
+                    />
                 </HeroDesc>
-                <HeroImgWrapper aria-label="giant headphone image on background">
-                    <HeroImg  />
-                </HeroImgWrapper>
+                <HeroImg aria-label="giant headphone image on background" />
             </HeroWrapper>
         </HeroContainer>
     )

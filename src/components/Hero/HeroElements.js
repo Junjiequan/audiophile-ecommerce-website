@@ -43,7 +43,7 @@ export const HeroInfo = Styled.p`
     font-weight:100;
     margin-bottom:4rem;
 `
-export const HeroImgWrapper = Styled.div`
+export const HeroImg = Styled.div`
     z-index:1;
     position:absolute;
     display:flex;
@@ -59,8 +59,5 @@ export const HeroImgWrapper = Styled.div`
     opacity:1;
     transition:opacity ${TRANSITION.ease};
     animation:${ANIMATION.flashy} 4.8s ease-in-out 1;
-    animation-delay:.5s;
-`
-export const HeroImg = Styled.img`
-    display:none;
+    animation-delay:2.2s;
 `

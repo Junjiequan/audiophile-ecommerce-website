@@ -6,7 +6,7 @@ export const ProductListWrapper = Styled.div`
     display:flex;
     justify-content:space-between;
     width:100%;
-    min-height:28.4rem;
+    min-height:20.4rem;
 `
 export const ProductListItem = Styled.div`
     display:flex;
@@ -14,7 +14,6 @@ export const ProductListItem = Styled.div`
     justify-content:flex-end;
     align-items:center;
     width:35rem;
-    max-height:20.4rem;
     background: ${COLORS.grayDark};
     border-radius:.8rem;
     padding-bottom:3rem;
@@ -36,7 +35,7 @@ export const ProductListItem = Styled.div`
         transition:all ${TRANSITION.ease};
     }
     &:hover:before{
-        animation: ${ANIMATION.jelloHorizontal} 0.9s both;
+        animation: ${ANIMATION.jelloHorizontal} 0.4s linear both;
     }
     &:nth-child(2){
         margin:0 1rem;
