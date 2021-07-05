@@ -7,7 +7,7 @@ export const MainContainer=Styled.div`
     display:flex;
     justify-content:center;
     padding:${SPACE.container};
-    margin:20rem 0;
+    position:relative;
 `
 export const MainWrapper = Styled.div`
     max-width:${WIDTH.desktop};
@@ -15,9 +15,9 @@ export const MainWrapper = Styled.div`
     height:100%;
     display:flex;
     flex-direction:column;
+    position:relative;
 `
 export const MainSpeakerWrapper = Styled.div`
-    margin-top:16.8rem;
     width:100%;
     min-height:56rem;
     display:flex;
@@ -84,21 +84,21 @@ export const MainEarphoneWrapper = Styled.div`
     display:flex;
     justify-content:space-between;
     width:100%;
-    height:100%;
+    min-height:100%;
+    max-height:32rem;
 `
 export const MainEarphoneImg = Styled.img`
     max-width:54rem;
     width:100%;
     border-radius:8px;
-    min-height:32rem;
+    max-height:100%;
     object-fit:cover;
-    margin-bottom:2.4rem;
 `
 export const MainEarphoneInfo = Styled.div`
     background:${COLORS.grayDark};
     max-width:54rem;
     width:100%;
     border-radius:8px;
-    max-height:32rem;
+    max-height:100%;
     padding:9.5rem;
 `

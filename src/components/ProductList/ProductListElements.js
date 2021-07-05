@@ -1,12 +1,19 @@
 import Styled from 'styled-components';
-import { COLORS,FONT,TRANSITION } from '../../Constants'
+import { COLORS,FONT,TRANSITION,WIDTH,SPACE } from '../../Constants'
 import { ANIMATION } from '../../Animation'
 
+export const ProductListContainer = Styled.div`
+    display:block;
+    margin:${SPACE.productList};
+    padding:${SPACE.container};
+`
 export const ProductListWrapper = Styled.div`
     display:flex;
+    max-width:${WIDTH.desktop};
     justify-content:space-between;
     width:100%;
     min-height:20.4rem;
+    margin:0 auto;
 `
 export const ProductListItem = Styled.div`
     display:flex;

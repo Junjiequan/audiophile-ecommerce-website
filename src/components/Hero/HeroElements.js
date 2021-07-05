@@ -32,14 +32,14 @@ export const HeroDesc = Styled.div`
     z-index:2;
 `
 export const HeroTitle = Styled.p`
-    opacity:.5;
+    color:rgba(255,255,255,0.5);
     ${FONT.overline};
 `
 export const HeroProductName = Styled.h1`
     margin:2.4rem 0;
 `
 export const HeroInfo = Styled.p`
-    opacity:.6;
+    color:rgba(255,255,255,0.75);
     font-weight:100;
     margin-bottom:4rem;
 `

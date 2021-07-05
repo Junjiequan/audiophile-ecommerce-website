@@ -13,7 +13,6 @@ import {
     MainEarphoneImg,
     MainEarphoneInfo,
 } from './HomeMainElements'
-import ProductList from '../../ProductList/'
 import speakerZX9Img from '../../../assets/home/desktop/image-speaker-zx9.png'
 import speakerZX7Img from '../../../assets/home/desktop/image-speaker-zx7.jpg'
 import earphoneYX1Img from '../../../assets/home/desktop/image-earphones-yx1.jpg'
@@ -24,7 +23,6 @@ const HomeMain = () => {
     return (
         <MainContainer>
             <MainWrapper>
-                <ProductList />
                 <MainSpeakerWrapper>
                     <MainSpeakerImg  data-aos="fade-up" data-aos-duration="1000" bg={speakerZX9Img} aria-label="ZX9 speaker product image" />
                     <MainSpeakerInfo>
@@ -49,6 +47,7 @@ const HomeMain = () => {
                         <GlobalBtnWhite data-text="see product" aria-label="link to YX1 earphone product detail page"/>
                     </MainEarphoneInfo>
                 </MainEarphoneWrapper>
+
             </MainWrapper>
         </MainContainer>
     )
