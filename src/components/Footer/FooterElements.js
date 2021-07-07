@@ -7,17 +7,30 @@ export const FooterContainer = Styled.footer`
     background: ${COLORS.blackLight};
     padding:${SPACE.FootDeskContainerPadding};
     color:${COLORS.white};
+    min-height:36.5rem;
 `
 export const FooterWrapper = Styled.div`
     display:flex;
     flex-direction:column;
+    justify-content:space-between;
     width:100%;
     margin:${SPACE.wrapper};
     max-width:${WIDTH.desktop};
+    position:relative;
+    &:before{
+        position:absolute;
+        content:'';
+        top:-7.5rem;left:0;
+        display:flex;
+        height:.4rem;
+        width:10.1rem;
+        background:${COLORS.brownDark};
+    }
 `
 export const FooterLinks = Styled.div`
     display:flex;
     justify-content:space-between;
+    align-items:center;
 `
 export const FooterLogo = Styled.a`
     cursor:pointer;
@@ -28,29 +41,44 @@ export const LogoImg = Styled.img`
 `
 export const FooterNav = Styled.div`
     display:flex;
+    text-transform:uppercase;
+    font-size:1.3rem;
 `
-export const FooterNavLink = Styled.div`
+export const FooterNavLink = Styled.a`
     cursor:pointer;
-    padding:0 1rem;
+    transition: color ${TRANSITION.ease};
+    &:hover{
+        color:${COLORS.brownDark};
+    }
+    &:not(:last-of-type){
+        margin-right:3.4rem;
+    }
 `
 export const FooterInfo = Styled.p`
     max-width:54rem;
     font-weight:200;
-    opacity:0.5;
+    opacity:.5;
+    margin-bottom:3.8rem;
 `
 export const FooterEnder = Styled.div`
     display:flex;
     justify-content:space-between;
 `
-export const CopyRight = Styled.p``
+export const CopyRight = Styled.p`
+    opacity:.5;
+    font-weight:700;
+`
 export const FooterIcons = Styled.div`
-    transform:translateY(-2rem);
+    transform:translateY(-6.3rem);
 `
 export const FooterIcon = Styled.a`
-    margin:0 1rem;
+    display:inline-block;
     transition:all ${TRANSITION.ease};
-    font-size:2.4rem;
+    font-size:2.7rem;
     &:hover{
         color:${COLORS.brownDark}
+    }
+    &:not(:last-of-type){
+        margin-right:1.6rem;
     }
 `
