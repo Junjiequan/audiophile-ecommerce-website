@@ -11,7 +11,8 @@ export const COLORS={
 }
 
 export const SPACE={
-    navContainer:`3.2rem 2.4rem 3.6rem 2.4rem`,
+    navDeskContainerPadding:`3.2rem 2.4rem 3.6rem 2.4rem`,
+    FootDeskContainerPadding:`7.5rem 0 4.8rem`,
     container:`0 2.4rem`,
     navHeight:`9.6rem`,
     productList:`20rem 0 16.8rem`,

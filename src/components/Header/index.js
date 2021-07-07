@@ -18,6 +18,9 @@ const Header = () => {
                     <LogoImg src={Logo} alt="audiophile logo"/>
                 </HeaderLogo>
                 <HeaderNav>
+
+                    {/* REMINDER : TabIndex is just for testing porpuse! remove it on final version  */}
+
                     <HeaderNavLink tabIndex="0" >home</HeaderNavLink>
                     <HeaderNavLink tabIndex="0" >headphones</HeaderNavLink>
                     <HeaderNavLink tabIndex="0" >speakers</HeaderNavLink>

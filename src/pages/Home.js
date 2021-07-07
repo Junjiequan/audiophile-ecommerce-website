@@ -3,6 +3,8 @@ import Hero from '../components/Hero'
 import HomeMain from '../components/Main/HomeMain'
 import Banner from '../components/Banner'
 import ProductList from '../components/ProductList'
+import Footer from '../components/Footer'
+
 const Home = () => {
     return (
         <>
