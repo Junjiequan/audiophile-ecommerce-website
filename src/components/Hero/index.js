@@ -16,7 +16,7 @@ const Hero = () => {
                 <HeroDesc>
                     <HeroTitle data-aos="fade-down" data-aos-duration="500">new product</HeroTitle>
                     <HeroProductName data-aos="fade-right" data-aos-duration="1100" data-aos-delay="650">
-                        XX99 Mark II Headphones
+                        XX99 Mark II Headphones TEST
                     </HeroProductName>
                     <HeroInfo data-aos="zoom-in-out" data-aos-delay="1400" data-aos-duration="1100">
                         Experience natural, lifelike audio and exceptional 
