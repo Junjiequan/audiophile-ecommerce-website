@@ -10,7 +10,7 @@ export const COLORS={
     black:`rgba(0,0,0,1.0)`
 }
 export const DEVICE={
-    sm:'(max-width: 376px)',
+    sm:'(max-width: 520px)',
     md:'(max-width: 768px)',
     lg:'(max-width: 1024px)'
 }
