@@ -23,7 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "set CI=&npm run build",
-    "deploy": "vercel --prod"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
