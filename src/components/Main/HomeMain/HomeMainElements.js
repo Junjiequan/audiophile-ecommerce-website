@@ -80,25 +80,27 @@ export const MainH3 = Styled.h3`
     margin-bottom:3.2rem;
 `
 export const MainEarphoneWrapper = Styled.div`
-    margin-top:4.8rem;
+    margin-top:4.8rem ;
     display:flex;
     justify-content:space-between;
-    width:100%;
-    min-height:100%;
+    max-width:100%;
     max-height:32rem;
 `
 export const MainEarphoneImg = Styled.img`
-    max-width:54rem;
-    width:100%;
-    border-radius:8px;
-    max-height:100%;
     object-fit:cover;
+    width:50%;
+    height:32rem;
+    border-radius:8px;
+    margin-right:3rem;
+
 `
 export const MainEarphoneInfo = Styled.div`
     background:${COLORS.grayDark};
-    max-width:54rem;
     width:100%;
     border-radius:8px;
     max-height:100%;
-    padding:9.5rem;
+    padding-left:8%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 `

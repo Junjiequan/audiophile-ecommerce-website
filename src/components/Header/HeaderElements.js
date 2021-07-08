@@ -35,12 +35,13 @@ export const HeaderWrapper = Styled.div`
     ${prop=> prop.borderBot ? headerBorderBottom : null};
 `
 export const HeaderLogo = Styled(LinkR)`
-    min-width:14.3rem;
-    height:2.5rem;
+    min-width:14.3rem;;
 `
 export const LogoImg = Styled.img`
     pointer-events:none;
     max-width:100%;
+    width:14.3rem;
+    height:2.5rem;
 `
 export const HeaderNav = Styled.nav`
     display:flex;

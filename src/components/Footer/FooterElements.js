@@ -1,5 +1,6 @@
 import Styled from 'styled-components';
 import { COLORS,WIDTH,SPACE,TRANSITION } from '../../Constants'
+import { Link as LinkR } from 'react-router-dom'
 
 export const FooterContainer = Styled.footer`
     display:flex;
@@ -32,12 +33,15 @@ export const FooterLinks = Styled.div`
     justify-content:space-between;
     align-items:center;
 `
-export const FooterLogo = Styled.a`
+export const FooterLogo = Styled(LinkR)`
     cursor:pointer;
+    min-width:14.3rem;
 `
 export const LogoImg = Styled.img`
     pointer-events:none;
     max-width:100%;
+    width:14.3rem;
+    height:2.5rem;
 `
 export const FooterNav = Styled.div`
     display:flex;
