@@ -1,5 +1,5 @@
 import Styled from 'styled-components';
-import { COLORS,WIDTH,SPACE,TRANSITION } from '../../Constants'
+import { COLORS,WIDTH,SPACE,TRANSITION,DEVICE } from '../../Constants'
 import { Link as LinkR } from 'react-router-dom'
 
 export const FooterContainer = Styled.footer`
@@ -74,6 +74,9 @@ export const CopyRight = Styled.p`
 `
 export const FooterIcons = Styled.div`
     transform:translateY(-6.3rem);
+    @media screen and ${DEVICE.md}{
+        transform:translateY(0);
+    }
 `
 export const FooterIcon = Styled.a`
     display:inline-block;
