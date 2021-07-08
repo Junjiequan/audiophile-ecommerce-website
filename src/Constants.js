@@ -20,6 +20,8 @@ export const SPACE={
     container:`0 2.4rem`,
     navHeight:`9.6rem`,
     productList:`20rem 0 16.8rem`,
+    productListMD:`15.3rem 0 9.6rem`,
+    productListSM:`8.9rem 0 12rem`,
     banner:`20rem 0`
 }
 
@@ -32,7 +34,7 @@ export const TRANSITION={
     easeIn:`.3s ease-in`,
     easeOut:`.3s ease-out`,
     easeInOut:`.3s ease-in-out`,
-    easeFast:`.2s ease`,
+    easeFast:`.1s ease`,
 }
 
 export const FONT={

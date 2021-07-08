@@ -1,5 +1,5 @@
 import Styled from 'styled-components';
-import { Link as LinkR } from 'react-router-dom';
+// import { Link as LinkR } from 'react-router-dom';
 import { COLORS, TRANSITION, FONT } from './Constants'
 import arrowIcon from './assets/shared/desktop/icon-arrow-right.svg'
 import { ProductListItem } from './components/ProductList/ProductListElements'
@@ -146,7 +146,7 @@ export const GlobalBtnWhite = Styled.button`
         transform:translateY(2px);
     }
 `
-export const GlobalArrowBtn = Styled(LinkR)`
+export const GlobalArrowBtn = Styled.button`
     pointer-events:none;
     display:flex;
     align-items:center;

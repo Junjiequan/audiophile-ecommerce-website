@@ -17,32 +17,32 @@ const ProductList = () => {
             <ProductListWrapper >
                 <ProductListItem 
                     data-aos-once="true"
-                    data-aos="flip-left"
+                    // data-aos="flip-left"
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="700"
-                    productImage={headphone}>
+                    data-product-image={headphone}>
                     <ProductTitle>headphones</ProductTitle>
-                    <GlobalArrowBtn data-text="shop" aria-label="link to headphones product page"/>
+                    <GlobalArrowBtn data-text="shop" tabIndex="-1" aria-label="link to headphones product page"/>
                 </ProductListItem>
                 <ProductListItem 
                     data-aos-once="true"
-                    data-aos="flip-left"
+                    // data-aos="flip-left"
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="700"
                     data-aos-delay="100"
-                    productImage={speaker}>
+                    data-product-image={speaker}>
                     <ProductTitle>speakers</ProductTitle>
-                    <GlobalArrowBtn data-text="shop" aria-label="link to speakers product page"/>
+                    <GlobalArrowBtn data-text="shop" tabIndex="-1" aria-label="link to speakers product page"/>
                 </ProductListItem>
                 <ProductListItem 
                     data-aos-once="true"
-                    data-aos="flip-left"
+                    // data-aos="flip-left"
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="700"
                     data-aos-delay="200"
-                    productImage={earphone}>
+                    data-product-image={earphone}>
                     <ProductTitle>earphones</ProductTitle>
-                    <GlobalArrowBtn data-text="shop" aria-label="link to earphones product page"/>
+                    <GlobalArrowBtn data-text="shop" tabIndex="-1" aria-label="link to earphones product page"/>
                 </ProductListItem>
             </ProductListWrapper>
         </ProductListContainer>
