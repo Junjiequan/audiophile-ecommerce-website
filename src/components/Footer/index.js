@@ -45,9 +45,9 @@ const Footer = () => {
                 <FooterEnder>
                     <CopyRight>Copyright 2021. All Rights Reserved</CopyRight>
                     <FooterIcons>
-                        <FooterIcon data-aos="fade-up" data-aos-duration="500"  href="#" rel="noopener noreferrer nofollow"><FaFacebookSquare /></FooterIcon>
-                        <FooterIcon data-aos="fade-up" data-aos-duration="500"data-aos-delay ="100" href="#" rel="noopener noreferrer nofollow"><FaInstagram /></FooterIcon>
-                        <FooterIcon data-aos="fade-up" data-aos-duration="500" data-aos-delay ="200" href="#" rel="noopener noreferrer nofollow"><FaTwitter /></FooterIcon>
+                        <FooterIcon href="#" rel="noopener noreferrer nofollow"><FaFacebookSquare /></FooterIcon>
+                        <FooterIcon href="#" rel="noopener noreferrer nofollow"><FaInstagram /></FooterIcon>
+                        <FooterIcon href="#" rel="noopener noreferrer nofollow"><FaTwitter /></FooterIcon>
                     </FooterIcons>
                 </FooterEnder>
             </FooterWrapper>

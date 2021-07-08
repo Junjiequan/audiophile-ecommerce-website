@@ -9,7 +9,11 @@ export const COLORS={
     blackStupid2:`rgba(79,79,79,1.0)`,
     black:`rgba(0,0,0,1.0)`
 }
-
+export const DEVICE={
+    sm:'(max-width: 376px)',
+    md:'(max-width: 768px)',
+    lg:'(max-width: 1024px)'
+}
 export const SPACE={
     navDeskContainerPadding:`3.2rem 2.4rem 3.6rem`,
     FootDeskContainerPadding:`7.5rem 2.4rem 4.8rem`,

@@ -1,5 +1,5 @@
 import Styled from 'styled-components'
-import { COLORS,WIDTH,SPACE } from '../../Constants'
+import { COLORS,WIDTH,SPACE,DEVICE } from '../../Constants'
 
 export const BannerContainer = Styled.div`
     display:block;
@@ -12,6 +12,10 @@ export const BannerWrapper = Styled.div`
     max-width:${WIDTH.desktop};
     width:100%;
     margin:auto;
+    @media screen and ${DEVICE.md}{
+        flex-direction:column-reverse;
+        align-items:center;
+    }
 `
 
 export const BannerInfo = Styled.div`
@@ -22,6 +26,11 @@ export const BannerInfo = Styled.div`
     flex-direction:column;
     align-self:center;
     margin-right:12.5rem;
+    @media screen and ${DEVICE.md}{
+        text-align:center;
+        margin:0;
+        max-width:57.3rem;
+    }
 `
 
 export const BannerH2 = Styled.h2`
@@ -36,9 +45,18 @@ export const BannerDesc = Styled.p`
 export const BannerImgWrapper = Styled.div`
     display:flex;
     max-width:54rem;
+    @media screen and ${DEVICE.md}{
+        margin-bottom:6.3rem;
+        max-width:100%;
+    }
 `
 export const BannerImg = Styled.img`
     object-fit:cover;
-    max-width:100%;
+    width:54rem;
+    height:58.8rem;
     border-radius:8px;
+    @media screen and ${DEVICE.md}{
+        width:68.9rem;
+        height:30rem;
+    }
 `

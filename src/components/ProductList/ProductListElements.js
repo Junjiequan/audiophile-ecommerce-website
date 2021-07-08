@@ -1,5 +1,5 @@
 import Styled from 'styled-components';
-import { COLORS,FONT,TRANSITION,WIDTH,SPACE } from '../../Constants'
+import { COLORS,FONT,TRANSITION,WIDTH,SPACE,DEVICE } from '../../Constants'
 import { ANIMATION } from '../../Animation'
 
 export const ProductListContainer = Styled.div`
@@ -14,6 +14,9 @@ export const ProductListWrapper = Styled.div`
     width:100%;
     min-height:20.4rem;
     margin:0 auto;
+    @media screen and ${DEVICE.md}{
+        min-height:16.5rem;
+    }
 `
 export const ProductListItem = Styled.div`
     display:flex;
@@ -46,6 +49,16 @@ export const ProductListItem = Styled.div`
     }
     &:nth-child(2){
         margin:0 1rem;
+    }
+    @media screen and ${DEVICE.md}{
+        width:100%;
+        &:before{
+            top:-11rem;
+        }
+        &:nth-child(3):before{
+            top:-10.5rem;
+            background-size:73%;
+        }
     }
 `
 export const ProductTitle = Styled.span`

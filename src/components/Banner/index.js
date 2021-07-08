@@ -1,5 +1,7 @@
 import React from 'react'
-import ManImg from '../../assets/shared/desktop/image-best-gear.jpg'
+import ManImgLG from '../../assets/shared/desktop/image-best-gear.jpg'
+import ManImgMD from '../../assets/shared/tablet/image-best-gear.jpg'
+import ManImgSM from '../../assets/shared/mobile/image-best-gear.jpg'
 import {
     BannerContainer,
     BannerWrapper,
@@ -28,7 +30,7 @@ const Banner = () => {
                     </BannerDesc>
                 </BannerInfo>
                 <BannerImgWrapper data-aos="flip-right" data-aos-duration="800" data-aos-delay="100" >
-                    <BannerImg src={ManImg} alt="A handsome man wearing a headphone" />
+                    <BannerImg src={ManImgLG}  srcSet={`${ManImgSM} 376w, ${ManImgMD} 768w, ${ManImgLG} 1024w`} alt="A handsome man wearing a headphone" />
                 </BannerImgWrapper>
             </BannerWrapper>
         </BannerContainer>
