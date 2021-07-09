@@ -4,9 +4,9 @@ export const HEADPHONES = {
 }
 export const SPEAKERS = {
     text:`speakers??`,
-    img:`http://images6.fanpop.com/image/answers/3093000/3093307_1354602620744.47res_469_300.jpg`
+    img:`https://umaiyomu.files.wordpress.com/2019/01/teehee.jpg`
 }
 export const EARPHONES = {
     text:`earphones??`,
-    img:`http://images6.fanpop.com/image/answers/3093000/3093307_1354602620744.47res_469_300.jpg`
+    img:`https://pbs.twimg.com/media/D7WmctxW4AEU8MN.jpg`
 }

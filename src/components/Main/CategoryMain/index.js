@@ -6,7 +6,7 @@ const CategoryMain = ({data}) => {
             <h2>
                 {data.text}
             </h2>
-            <img src={data.img} />
+            <img src={data.img} style={{maxWidth:"400px"}}/>
         </div>
     )
 }
