@@ -14,17 +14,14 @@ const Header = () => {
     return (
         <HeaderContainer bgColor={`transparent`}>
             <HeaderWrapper borderBot={true}>
-                <HeaderLogo>
+                <HeaderLogo to="/">
                     <LogoImg src={Logo} alt="audiophile logo"/>
                 </HeaderLogo>
                 <HeaderNav>
-
-                    {/* REMINDER : TabIndex is just for testing porpuse! remove it on final version  */}
-
-                    <HeaderNavLink tabIndex="0" >home</HeaderNavLink>
-                    <HeaderNavLink tabIndex="0" >headphones</HeaderNavLink>
-                    <HeaderNavLink tabIndex="0" >speakers</HeaderNavLink>
-                    <HeaderNavLink tabIndex="0" >earphones</HeaderNavLink>
+                    <HeaderNavLink to="/" exact={true} data-active="active" aria-label="link to home page">home</HeaderNavLink>
+                    <HeaderNavLink to="/headphones" exact={true} data-active="active" aria-label="link to headphones page">headphones</HeaderNavLink>
+                    <HeaderNavLink to="/speakers" exact={true} data-active="active" aria-label="link to speakers page">speakers</HeaderNavLink>
+                    <HeaderNavLink to="/earphones" exact={true} data-active="active" aria-label="link to earphones page">earphones</HeaderNavLink>
                 </HeaderNav>
                 <Cart />
             </HeaderWrapper>

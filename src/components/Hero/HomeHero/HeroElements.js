@@ -1,9 +1,9 @@
 import Styled from 'styled-components'
-import HeroBg from '../../assets/home/desktop/image-hero.jpg'
-import HeroBgMD from '../../assets/home/tablet/image-header.jpg'
-import HeroBgSM from '../../assets/home/mobile/image-header.jpg'
-import { SPACE,WIDTH,COLORS,FONT,TRANSITION,DEVICE } from '../../Constants'
-import { ANIMATION } from '../../Animation'
+import HeroBg from '../../../assets/home/desktop/image-hero.jpg'
+import HeroBgMD from '../../../assets/home/tablet/image-header.jpg'
+import HeroBgSM from '../../../assets/home/mobile/image-header.jpg'
+import { SPACE,WIDTH,COLORS,FONT,TRANSITION,DEVICE } from '../../../Constants'
+import { ANIMATION } from '../../../Animation'
 
 
 export const HeroContainer = Styled.section`
@@ -90,7 +90,7 @@ export const HeroImg = Styled.div`
     opacity:1;
     transition:opacity ${TRANSITION.ease};
     animation:${ANIMATION.flashy} 4.8s ease-in-out 1;
-    animation-delay:2.2s;
+    animation-delay:1.6s;
     @media screen and ${DEVICE.md}{
         background-image:url(${HeroBgMD});
         background-position:center center;

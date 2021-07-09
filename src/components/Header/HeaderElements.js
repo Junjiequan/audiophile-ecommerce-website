@@ -52,7 +52,7 @@ export const HeaderNav = Styled.nav`
         display:none;
     }
 `
-export const HeaderNavLink = Styled.a`
+export const HeaderNavLink = Styled(NavLink)`
     cursor:pointer;
     color:${COLORS.white};
     font-weight:700;
@@ -71,6 +71,9 @@ export const HeaderNavLink = Styled.a`
     }
     &:focus-visible{
         transition: all ${TRANSITION.ease};
+        background-position: 0%;
+    }
+    &.${props=> props["data-active"]}{
         background-position: 0%;
     }
 `

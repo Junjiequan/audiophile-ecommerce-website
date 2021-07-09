@@ -1,6 +1,6 @@
 import Styled from 'styled-components';
 import { COLORS,WIDTH,SPACE,TRANSITION,DEVICE } from '../../Constants'
-import { Link as LinkR } from 'react-router-dom'
+import { Link as LinkR, NavLink } from 'react-router-dom'
 
 export const FooterContainer = Styled.footer`
     display:flex;
@@ -67,7 +67,7 @@ export const FooterNav = Styled.div`
         margin:3rem 0;
     }
 `
-export const FooterNavLink = Styled.a`
+export const FooterNavLink = Styled(NavLink)`
     cursor:pointer;
     transition: color ${TRANSITION.ease};
     &:hover{
@@ -75,6 +75,12 @@ export const FooterNavLink = Styled.a`
     }
     &:not(:last-of-type){
         margin-right:3.4rem;
+    }
+    &:focus-visible{
+        color:${COLORS.brownDark};
+    }
+    &.${props=> props["data-active"]}{
+        color:${COLORS.brownDark};
     }
     @media screen and ${DEVICE.sm}{
         margin:0.8rem 0;

@@ -8,7 +8,7 @@ import{
     HeroInfo,
     HeroImg,
 } from './HeroElements'
-import {GlobalBtnBrown} from '../../GlobalBtn'
+import {GlobalBtnBrown} from '../../../GlobalBtn'
 const Hero = () => {
     return (
         <HeroContainer>

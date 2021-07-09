@@ -26,14 +26,14 @@ const Footer = () => {
         <FooterContainer>
             <FooterWrapper>
                 <FooterLinks>
-                    <FooterLogo>
+                    <FooterLogo to="/">
                         <LogoImg src={Logo} alt="audiophile logo" />
                     </FooterLogo>
                     <FooterNav>
-                        <FooterNavLink tabIndex="0" aria-label="link to home">home</FooterNavLink>
-                        <FooterNavLink tabIndex="0" aria-label="link to #">headphones</FooterNavLink>
-                        <FooterNavLink tabIndex="0" aria-label="link to #">speakers</FooterNavLink>
-                        <FooterNavLink tabIndex="0" aria-label="link to #">earphones</FooterNavLink>
+                        <FooterNavLink to="/" exact={true} aria-label="link to home" data-active="active">home</FooterNavLink>
+                        <FooterNavLink to="/headphones" exact={true} aria-label="link to headphones" data-active="active">headphones</FooterNavLink>
+                        <FooterNavLink to="/speakers" exact={true} aria-label="link to speakers" data-active="active">speakers</FooterNavLink>
+                        <FooterNavLink to="/earphones" exact={true} aria-label="link to earphones" data-active="active">earphones</FooterNavLink>
                     </FooterNav>
                 </FooterLinks>
                 <FooterInfo>
