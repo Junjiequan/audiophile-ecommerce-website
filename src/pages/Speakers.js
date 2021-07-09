@@ -9,7 +9,7 @@ import {SPEAKERS} from '../data/CategoryData'
 const Speakers = () => {
     return (
         <>
-        <CategoryHero pageTitle="Earphones"/>
+        <CategoryHero pageTitle="speakers"/>
         <CategoryMain data={SPEAKERS} />
         <ProductList />
         <Banner />
