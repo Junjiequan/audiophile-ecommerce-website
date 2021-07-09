@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/audiophile-ecommerce-website/static/js/main.6f6039e5.chunk.js",
-    "main.js.map": "/audiophile-ecommerce-website/static/js/main.6f6039e5.chunk.js.map",
+    "main.js": "/audiophile-ecommerce-website/static/js/main.aeeeec99.chunk.js",
+    "main.js.map": "/audiophile-ecommerce-website/static/js/main.aeeeec99.chunk.js.map",
     "runtime-main.js": "/audiophile-ecommerce-website/static/js/runtime-main.e958b9fd.js",
     "runtime-main.js.map": "/audiophile-ecommerce-website/static/js/runtime-main.e958b9fd.js.map",
     "static/css/2.ec02d681.chunk.css": "/audiophile-ecommerce-website/static/css/2.ec02d681.chunk.css",
@@ -20,16 +20,19 @@
     "static/media/image-header.d200a358.jpg": "/audiophile-ecommerce-website/static/media/image-header.d200a358.jpg",
     "static/media/image-headphones.fbd401d9.png": "/audiophile-ecommerce-website/static/media/image-headphones.fbd401d9.png",
     "static/media/image-hero.55c18e98.jpg": "/audiophile-ecommerce-website/static/media/image-hero.55c18e98.jpg",
+    "static/media/image-speaker-zx7.173a4cb5.jpg": "/audiophile-ecommerce-website/static/media/image-speaker-zx7.173a4cb5.jpg",
     "static/media/image-speaker-zx7.3d4940e8.jpg": "/audiophile-ecommerce-website/static/media/image-speaker-zx7.3d4940e8.jpg",
+    "static/media/image-speaker-zx7.82dc33d6.jpg": "/audiophile-ecommerce-website/static/media/image-speaker-zx7.82dc33d6.jpg",
     "static/media/image-speaker-zx9.153cd899.png": "/audiophile-ecommerce-website/static/media/image-speaker-zx9.153cd899.png",
     "static/media/image-speakers.bbb1a70b.png": "/audiophile-ecommerce-website/static/media/image-speakers.bbb1a70b.png",
     "static/media/logo.e03974f8.svg": "/audiophile-ecommerce-website/static/media/logo.e03974f8.svg",
+    "static/media/pattern-circles.8870eb0d.svg": "/audiophile-ecommerce-website/static/media/pattern-circles.8870eb0d.svg",
     "static/media/pattern-circles.f4df3610.svg": "/audiophile-ecommerce-website/static/media/pattern-circles.f4df3610.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.e958b9fd.js",
     "static/css/2.ec02d681.chunk.css",
     "static/js/2.9f85e26a.chunk.js",
-    "static/js/main.6f6039e5.chunk.js"
+    "static/js/main.aeeeec99.chunk.js"
   ]
 }
