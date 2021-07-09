@@ -10,13 +10,14 @@ export const COLORS={
     black:`rgba(0,0,0,1.0)`
 }
 export const DEVICE={
-    sm:'(max-width: 520px)',
+    sm:'(max-width: 550px)',
     md:'(max-width: 768px)',
     lg:'(max-width: 1024px)'
 }
 export const SPACE={
     navDeskContainerPadding:`3.2rem 2.4rem 3.6rem`,
     FootDeskContainerPadding:`7.5rem 2.4rem 4.8rem`,
+    FootDeskContainerPaddingSM:`5.2rem 2.4rem 3.8rem`,
     container:`0 2.4rem`,
     navHeight:`9.6rem`,
     productList:`20rem 0 16.8rem`,

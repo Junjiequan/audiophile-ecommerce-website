@@ -9,6 +9,10 @@ export const FooterContainer = Styled.footer`
     padding:${SPACE.FootDeskContainerPadding};
     color:${COLORS.white};
     min-height:36.5rem;
+    @media screen and ${DEVICE.sm}{
+        padding:${SPACE.FootDeskContainerPaddingSM};
+        text-align:center;
+    }
 `
 export const FooterWrapper = Styled.div`
     display:flex;
@@ -21,17 +25,27 @@ export const FooterWrapper = Styled.div`
     &:before{
         position:absolute;
         content:'';
-        top:-7.5rem;left:0;
+        top:-7.5rem;left:0;right:0;
         display:flex;
         height:.4rem;
         width:10.1rem;
         background:${COLORS.brownDark};
+    }
+    @media screen and ${DEVICE.sm}{
+        &:before{
+            top:-5.2rem;
+            justify-content:center;
+            margin:0 auto;
+        }
     }
 `
 export const FooterLinks = Styled.div`
     display:flex;
     justify-content:space-between;
     align-items:center;
+    @media screen and ${DEVICE.sm}{
+        flex-direction:column;
+    }
 `
 export const FooterLogo = Styled(LinkR)`
     cursor:pointer;
@@ -47,6 +61,11 @@ export const FooterNav = Styled.div`
     display:flex;
     text-transform:uppercase;
     font-size:1.3rem;
+    @media screen and ${DEVICE.sm}{
+        flex-direction:column;
+        align-items:center;
+        margin:3rem 0;
+    }
 `
 export const FooterNavLink = Styled.a`
     cursor:pointer;
@@ -56,6 +75,12 @@ export const FooterNavLink = Styled.a`
     }
     &:not(:last-of-type){
         margin-right:3.4rem;
+    }
+    @media screen and ${DEVICE.sm}{
+        margin:0.8rem 0;
+        &:not(:last-of-type){
+            margin-right:0;
+        }
     }
 `
 export const FooterInfo = Styled.p`
@@ -67,10 +92,17 @@ export const FooterInfo = Styled.p`
 export const FooterEnder = Styled.div`
     display:flex;
     justify-content:space-between;
+    @media screen and ${DEVICE.sm}{
+        flex-direction:column;
+    }
 `
 export const CopyRight = Styled.p`
     opacity:.5;
     font-weight:700;
+    user-select:none;
+    @media screen and ${DEVICE.sm}{
+        margin-bottom:4.8rem;
+    }
 `
 export const FooterIcons = Styled.div`
     transform:translateY(-6.3rem);
