@@ -22,7 +22,8 @@ export const SPACE={
     productList:`20rem 0 16.8rem`,
     productListMD:`15.3rem 0 9.6rem`,
     productListSM:`8.9rem 0 12rem`,
-    banner:`20rem 0`
+    banner:`20rem 0`,
+    bannerSM:`20rem 0 10rem`,
 }
 
 export const WIDTH={

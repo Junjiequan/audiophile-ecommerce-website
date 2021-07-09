@@ -1,6 +1,6 @@
 import Styled from 'styled-components'
 import { Link as LinkR, NavLink } from 'react-router-dom'
-import { COLORS, SPACE, WIDTH, TRANSITION } from '../../Constants'
+import { COLORS, SPACE, WIDTH, TRANSITION, DEVICE } from '../../Constants'
 
 const headerBorderBottom = `
     &:after{
@@ -48,6 +48,9 @@ export const HeaderNav = Styled.nav`
     justify-content:space-between;
     max-width:42.9rem;
     width:100%;
+    @media screen and ${DEVICE.md}{
+        display:none;
+    }
 `
 export const HeaderNavLink = Styled.a`
     cursor:pointer;

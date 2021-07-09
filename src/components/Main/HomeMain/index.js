@@ -24,7 +24,11 @@ const HomeMain = () => {
         <MainContainer>
             <MainWrapper>
                 <MainSpeakerWrapper>
-                    <MainSpeakerImg  data-aos="fade-up" data-aos-duration="1000" bg={speakerZX9Img} aria-label="ZX9 speaker product image" />
+                    <MainSpeakerImg 
+                        data-aos="fade-up" 
+                        data-aos-duration="1000" 
+                        imageSrc={speakerZX9Img} 
+                        aria-label="ZX9 speaker product image" />
                     <MainSpeakerInfo>
                         <MainSpeakerH1>ZX9 SPEAKER</MainSpeakerH1>
                         <MainSpeakerDesc>
@@ -35,7 +39,11 @@ const HomeMain = () => {
                     </MainSpeakerInfo>
                 </MainSpeakerWrapper>
 
-                <MainSpeakerSecWrapper data-aos="zoom-in-out" data-aos-duration="700" bgSrc={speakerZX7Img} aria-label="ZX7 speaker product image">
+                <MainSpeakerSecWrapper 
+                    data-aos="zoom-in-out" 
+                    data-aos-duration="700" 
+                    imageSrc={speakerZX7Img}
+                    aria-label="ZX7 speaker product image">
                     <MainH3>ZX7 SPEAKER</MainH3>
                     <GlobalBtnWhite data-text="see product" aria-label="link to ZX7 speaker product detail page"/>
                 </MainSpeakerSecWrapper>

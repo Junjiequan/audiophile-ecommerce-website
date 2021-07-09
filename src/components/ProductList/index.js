@@ -17,7 +17,7 @@ const ProductList = () => {
             <ProductListWrapper >
                 <ProductListItem 
                     data-aos-once="true"
-                    // data-aos="flip-left"
+                    data-aos="flip-left"
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="700"
                     data-product-image={headphone}>
@@ -26,7 +26,7 @@ const ProductList = () => {
                 </ProductListItem>
                 <ProductListItem 
                     data-aos-once="true"
-                    // data-aos="flip-left"
+                    data-aos="flip-left"
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="700"
                     data-aos-delay="100"
@@ -36,7 +36,7 @@ const ProductList = () => {
                 </ProductListItem>
                 <ProductListItem 
                     data-aos-once="true"
-                    // data-aos="flip-left"
+                    data-aos="flip-left"
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="700"
                     data-aos-delay="200"

@@ -5,6 +5,9 @@ export const BannerContainer = Styled.div`
     display:block;
     margin:${SPACE.banner};
     padding:${SPACE.container};
+    @media screen and ${DEVICE.sm}{
+        margin:${SPACE.bannerSM};
+    }
 `
 export const BannerWrapper = Styled.div`
     display:flex;
@@ -17,7 +20,6 @@ export const BannerWrapper = Styled.div`
         align-items:center;
     }
 `
-
 export const BannerInfo = Styled.div`
     max-width:44.5rem;
     width:100%;
