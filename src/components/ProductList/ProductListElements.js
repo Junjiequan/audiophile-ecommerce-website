@@ -73,6 +73,7 @@ export const ProductListItem = Styled(LinkR)`
         }
     }
     @media screen and ${DEVICE.sm}{
+        padding-bottom:2rem;
         min-height:16.5rem;
         &:nth-child(2){
             margin:8rem 0;
@@ -91,4 +92,8 @@ export const ProductTitle = Styled.span`
     pointer-events:none;
     margin-bottom:1.5rem;
     ${FONT.menutitle};
+    @media screen and ${DEVICE.sm}{
+        margin-bottom:1rem;
+        font-size:1.5rem;
+    }
 `

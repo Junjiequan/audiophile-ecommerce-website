@@ -158,8 +158,10 @@ export const GlobalArrowBtn = Styled.button`
     &:before{
         position:absolute;
         content:attr(data-text);
+        opacity:0.4;
         left:0;
-        transition: color ${TRANSITION.easeFast};
+        color:${COLORS.black};
+        transition: all ${TRANSITION.ease};
     }
     &:after{
         content:url(${arrowIcon});
@@ -169,7 +171,8 @@ export const GlobalArrowBtn = Styled.button`
         align-items:center;
         height:100%;
     };
-    ${ProductListItem}:hover &{
+    ${ProductListItem}:hover &:before{
+        opacity:1;
         color:${COLORS.brownDark};
     }
     &:focus-visible{

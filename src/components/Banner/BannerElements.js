@@ -37,6 +37,10 @@ export const BannerInfo = Styled.div`
 
 export const BannerH2 = Styled.h2`
     margin-bottom:3.2rem;
+    @media screen and ${DEVICE.sm}{
+        font-size:2.8rem;
+        line-height:3.8rem;
+    }
 `
 export const BannerSpan = Styled.span`
     color:${COLORS.brownDark};

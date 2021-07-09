@@ -65,7 +65,7 @@ export const FONT={
     menutitle:`
         font-size:1.8rem;
         font-weight:700;
-        letter-spacing:.12;
+        letter-spacing:.1rem;
         text-transform:uppercase;
     `
 }
