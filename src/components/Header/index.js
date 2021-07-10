@@ -1,4 +1,5 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom';
 import Cart  from '../Cart/'
 import{
     HeaderContainer,
@@ -11,8 +12,10 @@ import{
 import Logo from '../../assets/shared/desktop/logo.svg'
 
 const Header = () => {
+    const location = useLocation();
+    let isHomePage = location.pathname === '/';
     return (
-        <HeaderContainer bgColor={`transparent`}>
+        <HeaderContainer bgColor={isHomePage}>
             <HeaderWrapper borderBot={true}>
                 <HeaderLogo to="/">
                     <LogoImg src={Logo} alt="audiophile logo"/>

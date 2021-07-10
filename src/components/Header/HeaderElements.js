@@ -19,11 +19,11 @@ export const HeaderContainer = Styled.header`
     position:absolute;
     width:100%;
     height:9.6rem;
-    background:${prop=> prop.bgColor};
+    background:${prop=> prop.bgColor?'transparent':`${COLORS.black}`};
     display:flex;
     justify-content:center;
     padding:${SPACE.navDeskContainerPadding};
-    z-index:2;
+    z-index:999;
 `
 export const HeaderWrapper = Styled.div`
     margin:${SPACE.wrapper};
