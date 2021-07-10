@@ -11,6 +11,9 @@ export const MainContainer=Styled.main`
     justify-content:center;
     padding:${SPACE.container};
     position:relative;
+    @media screen and ${DEVICE.sm}{
+        margin:${SPACE.HomeMainSM}
+    }
 `
 export const MainWrapper = Styled.div`
     max-width:${WIDTH.desktop};

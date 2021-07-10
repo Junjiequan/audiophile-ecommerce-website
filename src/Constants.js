@@ -19,7 +19,6 @@ export const SPACE={
     FootDeskContainerPadding:`7.5rem 2.4rem 4.8rem`,
     FootDeskContainerPaddingSM:`5.2rem 2.4rem 3.8rem`,
     container:`0 2.4rem`,
-    navHeight:`9.6rem`,
     productList:`20rem 0 16.8rem`,
     productListMD:`15.3rem 0 9.6rem`,
     productListSM:`8.9rem 0 12rem`,
@@ -28,12 +27,15 @@ export const SPACE={
     CategoryMain:`16rem 0 20rem`,
     CategoryMainMD:`12rem 0 16rem`,
     CategoryMainSM:`6.4rem 0 8rem`,
+    HomeMainSM:`20rem 0 0`
 }
 
 export const WIDTH={
     desktop:`1110px`,
 }
-
+export const HEIGHT={
+    navHeight:`9.6rem`,
+}
 export const TRANSITION={
     ease:`.3s ease`,
     easeIn:`.3s ease-in`,
