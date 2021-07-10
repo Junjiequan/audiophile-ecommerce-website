@@ -20,11 +20,13 @@ const CategoryMain = ({data}) => {
             {data.map((item,index)=>{
                 let isEvenNum = index % 2 ? true: false;
                 return(
-                    <CategoryMainProduct data-reversed={isEvenNum}>
+                    <CategoryMainProduct data-reversed={isEvenNum} key={index}>
                         <ProductImgWrapper>
                             <ProductImg 
                                 width="540" 
                                 height="560" 
+                                data-aos="fade"
+                                data-aos-duration="800"
                                 src={require(`../../../assets/${item.src}`).default} 
                                 alt={item.alt} 
                             />

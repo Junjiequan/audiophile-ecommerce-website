@@ -25,7 +25,10 @@ export const CategoryMainProduct = Styled.div`
 `
 export const ProductImgWrapper = Styled.div`
     display:flex;
-    min-width:32.7rem;
+    max-width:54rem;
+    width:100%;
+    background:${COLORS.grayDark};
+    border-radius:8px;
 `
 export const ProductImg = Styled.img`
     object-fit:cover;

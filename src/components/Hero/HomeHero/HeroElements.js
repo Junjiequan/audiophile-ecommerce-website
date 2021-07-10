@@ -90,7 +90,7 @@ export const HeroImg = Styled.div`
     opacity:1;
     transition:opacity ${TRANSITION.ease};
     animation:${ANIMATION.flashy} 4.8s ease-in-out 1;
-    animation-delay:1.6s;
+    animation-delay:1.2s;
     @media screen and ${DEVICE.md}{
         background-image:url(${HeroBgMD});
         background-position:center center;

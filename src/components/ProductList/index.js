@@ -16,6 +16,7 @@ const ProductList = () => {
         <ProductListContainer>
             <ProductListWrapper >
                 <ProductListItem 
+                    to="/headphones"
                     data-aos-once="true"
                     data-aos="flip-left"
                     data-aos-easing="ease-out-cubic"
@@ -25,6 +26,7 @@ const ProductList = () => {
                     <GlobalArrowBtn data-text="shop" tabIndex="-1" aria-label="link to headphones product page"/>
                 </ProductListItem>
                 <ProductListItem 
+                    to="/speakers"
                     data-aos-once="true"
                     data-aos="flip-left"
                     data-aos-easing="ease-out-cubic"
@@ -35,6 +37,7 @@ const ProductList = () => {
                     <GlobalArrowBtn data-text="shop" tabIndex="-1" aria-label="link to speakers product page"/>
                 </ProductListItem>
                 <ProductListItem 
+                    to="/earphones"
                     data-aos-once="true"
                     data-aos="flip-left"
                     data-aos-easing="ease-out-cubic"

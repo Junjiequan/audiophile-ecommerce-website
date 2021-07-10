@@ -7,6 +7,10 @@ export const CategoryHeroContainer = Styled.section`
     justify-content:center;
     padding:${SPACE.container};
     background:${COLORS.black};
+    transform:translateY(-23.9rem);
+    @media screen and ${DEVICE.sm}{
+        transform:translateY(-9.5rem);
+    }
 `
 export const CategoryHeroWrapper = Styled.div`
     max-width:${WIDTH.desktop};
