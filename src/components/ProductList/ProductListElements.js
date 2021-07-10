@@ -26,7 +26,7 @@ export const ProductListWrapper = Styled.div`
     }
     @media screen and ${DEVICE.sm}{
         display:block;
-        min-height:0;
+        max-height:55rem;
         height:100%;
     }
 `
