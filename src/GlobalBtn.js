@@ -11,6 +11,7 @@ export const GlobalBtnBrown = Styled.button`
     justify-content:center;
     align-items:center;
     background-color:${COLORS.brownLight};
+    color:${COLORS.white};
     text-transform:uppercase;
     letter-spacing:.1rem;
     font-size:1.3rem;
@@ -43,7 +44,8 @@ export const GlobalBtnBrown = Styled.button`
         height:0;
     }
     &:active{
-        transform:translateY(2px);
+        /* transform:translateY(2px); */
+        top:2px;
     }
 `
 export const GlobalBtnBlack = Styled.button`

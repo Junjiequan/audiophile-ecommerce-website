@@ -1,13 +1,47 @@
 import React from 'react'
+import { GlobalBtnBrown } from '../../../GlobalBtn'
+import {
+    CategoryMainContainer,
+    CategoryMainWrapper,
+    CategoryMainProduct,
+    ProductImgWrapper,
+    ProductImg,
+    ProductInfo,
+    ProductFeature,
+    ProductTitle,
+    ProductDetail
+} from './CategoryMainElements'
+
 
 const CategoryMain = ({data}) => {
     return (
-        <div style={{display:"flex", flexDirection:"column",alignItems:"center"}}>
-            <h2>
-                {data.text}
-            </h2>
-            <img src={data.img} style={{maxWidth:"400px"}}/>
-        </div>
+        <CategoryMainContainer>
+            <CategoryMainWrapper>
+            {data.map((item,index)=>{
+                let isEvenNum = index % 2 ? true: false;
+                return(
+                    <CategoryMainProduct data-reversed={isEvenNum}>
+                        <ProductImgWrapper>
+                            <ProductImg 
+                                width="540" 
+                                height="560" 
+                                src={require(`../../../assets/${item.src}`).default} 
+                                alt={item.alt} 
+                            />
+                        </ProductImgWrapper>
+                        <ProductInfo>
+                            <ProductFeature>{item.feature}</ProductFeature>
+                            <ProductTitle>{item.product}</ProductTitle>
+                            <ProductDetail>
+                                {item.detail}
+                            </ProductDetail>
+                            <GlobalBtnBrown data-text="see product" aria-label={item.label}/>
+                        </ProductInfo>
+                    </CategoryMainProduct>
+                )
+            })}
+            </CategoryMainWrapper>
+        </CategoryMainContainer>
     )
 }
 

@@ -23,7 +23,7 @@ const Hero = () => {
                         build quality made for the passionate music enthusiast.
                     </HeroInfo>
                     <GlobalBtnBrown 
-                        data-aos="zoom-out" 
+                        data-aos="fade" 
                         data-aos-delay="1800" 
                         data-aos-duration="700" 
                         data-text="see product" 

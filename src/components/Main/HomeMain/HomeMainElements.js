@@ -93,8 +93,8 @@ export const MainSpeakerH1 = Styled.h2`
     }
 `
 export const MainSpeakerDesc = Styled.p`
-    opacity:.75;
-    font-weight:100;
+    opacity:.8;
+    font-weight:200;
     font-size:1.5rem;
     color:${COLORS.white};
     margin-bottom:6.5rem;

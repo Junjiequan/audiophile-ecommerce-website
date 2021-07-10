@@ -6,7 +6,6 @@ import {
 } from './CategoryHeroElements'
 
 const CategoryHero = ( {pageTitle} ) => {
-    console.log(pageTitle)
     return (
         <CategoryHeroContainer>
             <CategoryHeroWrapper>

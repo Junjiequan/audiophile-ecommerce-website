@@ -65,7 +65,7 @@ export const HeroProductName = Styled.h1`
 `
 export const HeroInfo = Styled.p`
     color:rgba(255,255,255,0.75);
-    font-weight:100;
+    font-weight:200;
     margin-bottom:4rem;
     @media screen and ${DEVICE.md}{
         max-width:34.9rem;

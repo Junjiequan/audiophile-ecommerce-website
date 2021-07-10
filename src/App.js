@@ -5,9 +5,9 @@ import  GlobalStyle  from './GlobalStyle'
 import Header from './components/Header/'
 import Footer from './components/Footer/'
 import Home from './pages/Home'
-import Headphones from './pages/Headphones'
-import Speakers from './pages/Speakers'
-import Earphones from './pages/Earphones'
+import Headphones from './pages/Category/Headphones'
+import Speakers from './pages/Category/Speakers'
+import Earphones from './pages/Category/Earphones'
 import Aos from 'aos';
 import "aos/dist/aos.css";
 
