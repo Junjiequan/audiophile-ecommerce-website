@@ -2,7 +2,7 @@ import Styled from 'styled-components';
 import { COLORS,SPACE,WIDTH,FONT,DEVICE } from '../../../Constants'
 
 
-export const CategoryMainContainer = Styled.section`
+export const CategoryMainContainer = Styled.main`
     display:flex;
     justify-content:center;
     padding:${SPACE.container};

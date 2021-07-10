@@ -1,7 +1,7 @@
 import Styled from 'styled-components'
 import { COLORS,WIDTH,SPACE,DEVICE } from '../../Constants'
 
-export const BannerContainer = Styled.div`
+export const BannerContainer = Styled.section`
     display:block;
     margin:${SPACE.banner};
     padding:${SPACE.container};

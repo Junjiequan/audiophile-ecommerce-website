@@ -6,7 +6,7 @@ import speakerZX7ImgMD from '../../../assets/home/tablet/image-speaker-zx7.jpg'
 import speakerZX7ImgSM from '../../../assets/home/mobile/image-speaker-zx7.jpg'
 
 
-export const MainContainer=Styled.div`
+export const MainContainer=Styled.main`
     display:flex;
     justify-content:center;
     padding:${SPACE.container};

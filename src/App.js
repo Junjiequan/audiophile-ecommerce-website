@@ -11,6 +11,7 @@ import Earphones from './pages/Category/Earphones'
 import Aos from 'aos';
 import "aos/dist/aos.css";
 
+
 const App = () => {
   Aos.init();
   return (
@@ -19,18 +20,10 @@ const App = () => {
       <ScrollToTop />
       <Header />
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/headphones">
-          <Headphones />
-        </Route>
-        <Route exact path="/speakers">
-          <Speakers />
-        </Route>
-        <Route exact path="/earphones">
-          <Earphones />
-        </Route>
+        <Route exact path="/" component={Home} />
+        <Route path="/headphones" component={Headphones} />
+        <Route path="/speakers" component={Speakers} />
+        <Route path="/earphones" component={Earphones} />
       </Switch>
       <Footer />
       </>

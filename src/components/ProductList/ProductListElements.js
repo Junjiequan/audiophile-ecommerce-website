@@ -3,7 +3,7 @@ import { COLORS,FONT,TRANSITION,WIDTH,SPACE,DEVICE } from '../../Constants'
 import { ANIMATION } from '../../Animation'
 import { Link as LinkR } from 'react-router-dom'
 
-export const ProductListContainer = Styled.div`
+export const ProductListContainer = Styled.section`
     display:block;
     margin:${SPACE.productList};
     padding:${SPACE.container};
