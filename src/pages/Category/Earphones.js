@@ -1,7 +1,7 @@
 import React from 'react'
 import CategoryHero from '../../components/Hero/CategoryHero'
 import Banner from '../../components/Banner'
-import ProductList from '../../components/ProductList'
+import ProductNav from '../../components/ProductNav'
 import CategoryMain from '../../components/Main/CategoryMain'
 import { EARPHONES } from '../../data/CategoryData'
 
@@ -11,7 +11,7 @@ const Earphones = () => {
         <>
         <CategoryHero pageTitle="Earphones"/>
         <CategoryMain data={EARPHONES} />
-        <ProductList />
+        <ProductNav />
         <Banner />
         </>
     )

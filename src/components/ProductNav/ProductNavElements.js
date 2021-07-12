@@ -3,18 +3,18 @@ import { COLORS,FONT,TRANSITION,WIDTH,SPACE,DEVICE } from '../../Constants'
 import { ANIMATION } from '../../Animation'
 import { Link as LinkR } from 'react-router-dom'
 
-export const ProductListContainer = Styled.section`
+export const ProductNavContainer = Styled.section`
     display:block;
-    margin:${SPACE.productList};
+    margin:${SPACE.productNav};
     padding:${SPACE.container};
     @media screen and ${DEVICE.md}{
-        margin:${SPACE.productListMD}
+        margin:${SPACE.productNavMD}
     }
     @media screen and ${DEVICE.sm}{
-        margin:${SPACE.productListSM}
+        margin:${SPACE.productNavSM}
     }
 `
-export const ProductListWrapper = Styled.div`
+export const ProductNavWrapper = Styled.div`
     display:flex;
     max-width:${WIDTH.desktop};
     justify-content:space-between;
@@ -30,7 +30,7 @@ export const ProductListWrapper = Styled.div`
         height:100%;
     }
 `
-export const ProductListItem = Styled(LinkR)`
+export const ProductNavItem = Styled(LinkR)`
     display:flex;
     flex-direction:column;
     justify-content:flex-end;

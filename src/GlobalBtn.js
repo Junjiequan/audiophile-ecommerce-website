@@ -2,7 +2,7 @@ import Styled from 'styled-components';
 // import { Link as LinkR } from 'react-router-dom';
 import { COLORS, TRANSITION, FONT } from './Constants'
 import arrowIcon from './assets/shared/desktop/icon-arrow-right.svg'
-import { ProductListItem } from './components/ProductList/ProductListElements'
+import { ProductNavItem } from './components/ProductNav/ProductNavElements'
 
 export const GlobalBtnBrown = Styled.button`
     display:flex;
@@ -173,7 +173,7 @@ export const GlobalArrowBtn = Styled.button`
         align-items:center;
         height:100%;
     };
-    ${ProductListItem}:hover &:before{
+    ${ProductNavItem}:hover &:before{
         opacity:1;
         color:${COLORS.brownDark};
     }
