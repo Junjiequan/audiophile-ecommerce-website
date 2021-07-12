@@ -181,3 +181,6 @@ export const GlobalArrowBtn = Styled.button`
         color:${COLORS.brownDark};
     }
 `
+export const GlobalGoBackBtn = Styled.button`
+
+`
