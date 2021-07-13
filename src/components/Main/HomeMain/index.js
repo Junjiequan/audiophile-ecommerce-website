@@ -35,7 +35,7 @@ const HomeMain = () => {
                             Upgrade to premium speakers that are phenomenally built 
                             to deliver truly remarkable sound.
                         </MainSpeakerDesc>
-                        <GlobalBtnBlack data-text="see product" aria-label="link to ZX9 speaker product detail page"/>
+                        <GlobalBtnBlack data-text="see product" aria-label="link to ZX9 speaker product detail page" to="/product_detail"/>
                     </MainSpeakerInfo>
                 </MainSpeakerWrapper>
 
@@ -45,14 +45,14 @@ const HomeMain = () => {
                     imageSrc={speakerZX7Img}
                     aria-label="ZX7 speaker product image">
                     <MainH3>ZX7 SPEAKER</MainH3>
-                    <GlobalBtnWhite data-text="see product" aria-label="link to ZX7 speaker product detail page"/>
+                    <GlobalBtnWhite data-text="see product" aria-label="link to ZX7 speaker product detail page" to="/product_detail"/>
                 </MainSpeakerSecWrapper>
 
                 <MainEarphoneWrapper aria-label="YX1 earphone product image">
                     <MainEarphoneImg data-aos="flip-left" data-aos-duration="800" data-aos-delay="100" src={earphoneYX1Img} alt="earphone YX1 product image"/>
                     <MainEarphoneInfo>
                         <MainH3>YX1 EARPHONES</MainH3>
-                        <GlobalBtnWhite data-text="see product" aria-label="link to YX1 earphone product detail page"/>
+                        <GlobalBtnWhite data-text="see product" aria-label="link to YX1 earphone product detail page" to="/product_detail"/>
                     </MainEarphoneInfo>
                 </MainEarphoneWrapper>
 

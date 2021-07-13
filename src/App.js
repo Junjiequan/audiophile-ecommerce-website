@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import Headphones from './pages/Category/Headphones'
 import Speakers from './pages/Category/Speakers'
 import Earphones from './pages/Category/Earphones'
+import ProductDetail from './pages/ProductDetail'
 import Aos from 'aos';
 import "aos/dist/aos.css";
 
@@ -24,6 +25,8 @@ const App = () => {
         <Route path="/headphones" component={Headphones} />
         <Route path="/speakers" component={Speakers} />
         <Route path="/earphones" component={Earphones} />
+        {/* /product_detail/${CREATE CURRENT PAGE} : Probably will work this way? will give it a try after off work tomorrow */}
+        <Route path="/product_detail" component={ProductDetail} />
       </Switch>
       <Footer />
       </>

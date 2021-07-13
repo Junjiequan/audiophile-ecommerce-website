@@ -17,6 +17,7 @@ const headerBorderBottom = `
 
 export const HeaderContainer = Styled.header`
     position:absolute;
+    top:0;
     width:100%;
     height:9.6rem;
     background:${prop=> prop.bgColor?'transparent':`${COLORS.black}`};

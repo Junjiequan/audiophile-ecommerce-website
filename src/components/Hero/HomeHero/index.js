@@ -9,6 +9,8 @@ import{
     HeroImg,
 } from './HeroElements'
 import {GlobalBtnBrown} from '../../../GlobalBtn'
+
+
 const Hero = () => {
     return (
         <HeroContainer>
@@ -28,6 +30,7 @@ const Hero = () => {
                         data-aos-duration="700" 
                         data-text="see product" 
                         aria-label="link to product page"
+                        to="/product_detail/headphone_xx99_mark_II"
                     />
                 </HeroDesc>
                 <HeroImg aria-label="giant headphone image on background" />

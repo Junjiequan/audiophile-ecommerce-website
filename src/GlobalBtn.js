@@ -1,10 +1,10 @@
 import Styled from 'styled-components';
-// import { Link as LinkR } from 'react-router-dom';
+import { Link as LinkR } from 'react-router-dom';
 import { COLORS, TRANSITION, FONT } from './Constants'
 import arrowIcon from './assets/shared/desktop/icon-arrow-right.svg'
 import { ProductNavItem } from './components/ProductNav/ProductNavElements'
 
-export const GlobalBtnBrown = Styled.button`
+export const GlobalBtnBrown = Styled(LinkR)`
     display:flex;
     width:16rem;
     height:4.8rem;
@@ -48,7 +48,7 @@ export const GlobalBtnBrown = Styled.button`
         top:2px;
     }
 `
-export const GlobalBtnBlack = Styled.button`
+export const GlobalBtnBlack = Styled(LinkR)`
     display:flex;
     width:16rem;
     height:4.8rem;
@@ -94,7 +94,7 @@ export const GlobalBtnBlack = Styled.button`
         transform:translateY(2px);
     }
 `
-export const GlobalBtnWhite = Styled.button`
+export const GlobalBtnWhite = Styled(LinkR)`
     display:flex;
     width:16rem;
     height:4.8rem;
