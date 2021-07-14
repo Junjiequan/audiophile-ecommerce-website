@@ -102,5 +102,4 @@ export const ProductDetail = Styled.p`
     font-weight:200;
     margin-bottom:6.5rem;
     opacity:.8;
-
 `

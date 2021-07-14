@@ -29,7 +29,6 @@ export const SPACE={
     CategoryMainSM:`6.4rem 0 8rem`,
     HomeMainSM:`20rem 0 0`
 }
-
 export const WIDTH={
     desktop:`1110px`,
 }
@@ -43,7 +42,6 @@ export const TRANSITION={
     easeInOut:`.3s ease-in-out`,
     easeFast:`.1s ease`,
 }
-
 export const FONT={
     mainProductTitle:`
         font-size:5.6rem;

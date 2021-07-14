@@ -2,27 +2,9 @@ import React from 'react'
 import {
     ProductMainContainer,
     ProductMainWrapper,
-    ProductMainInfo,
-    ProductImgWrapper,
-    ProductImg,
-    PorudctDetails,
-    ProductFeature,
-    ProductTitle,
-    ProductInfo,
-    ProductMainDesc,
-    Features,
-    FeaturesTitle,
-    FeaturesText,
-    InTheBox,
-    InTheBoxTitle,
-    InTheBoxDesc,
-    IntheBoxNum,
-    ProductMainGallery,
-    ProductMainImg1,
-    ProductMainImg2,
-    ProductMainImg3
-} from 'styled-components';
-import AddCart from '../../AddCart';
+} from './ProductMainElements';
+import Product from './Product'
+import GoBackBtn from './GoBackBtn'
 
 //Probably need to break the structure down to several small components
 //This is too much, probably hard to maintain later.
@@ -33,17 +15,9 @@ const ProductMain = () => {
         <ProductMainContainer>
             <ProductMainWrapper>
                 <GoBackBtn />
-                <ProductMainInfo>
-                    <ProductImgWrapper>
-                        <ProductImg />
-                    </ProductImgWrapper>
-                    <PorudctDetails>
-                        <ProductFeature></ProductFeature>
-                        <ProductTitle></ProductTitle>
-                        <ProductInfo></ProductInfo>
-                        <AddCart />
-                    </PorudctDetails>
-                </ProductMainInfo>
+                <Product />
+
+{/* 
                 <ProductMainDesc>
                     <Features>
                         <FeaturesTitle></FeaturesTitle>
@@ -51,16 +25,17 @@ const ProductMain = () => {
                     </Features>
                     <InTheBox>
                         <InTheBoxTitle></InTheBoxTitle>
-                        {/* Loop in the box insde */}
+                        Loop in the box insde
                         <InTheBoxDesc><IntheBoxNum></IntheBoxNum></InTheBoxDesc>
                     </InTheBox>
                 </ProductMainDesc>
                 <ProductMainGallery>
-                    {/* Use Grid here. */}
+                    Use Grid here.
                     <ProductMainImg1 alt=''/>
                     <ProductMainImg2 alt=''/>
                     <ProductMainImg3 alt=''/>
                 </ProductMainGallery>
+                 */}
             </ProductMainWrapper>
         </ProductMainContainer>
     )
