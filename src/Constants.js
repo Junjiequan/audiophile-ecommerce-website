@@ -27,7 +27,10 @@ export const SPACE={
     CategoryMain:`16rem 0 20rem`,
     CategoryMainMD:`12rem 0 16rem`,
     CategoryMainSM:`6.4rem 0 8rem`,
-    HomeMainSM:`20rem 0 0`
+    HomeMainSM:`20rem 0 0`,
+    ProductMainMargin:`0 0 16rem`,
+    ProductMainMarginMD:`0 0 12rem`,
+    ProductMainMarginSM:`0 0 8rem`,
 }
 export const WIDTH={
     desktop:`1110px`,
@@ -70,5 +73,17 @@ export const FONT={
         font-weight:700;
         letter-spacing:.1rem;
         text-transform:uppercase;
+    `,
+    producttitle:`
+        font-size:3.2rem;
+        line-height:3.6rem;
+        font-weight:700;
+        text-transform:uppercase;
+    `,
+    preferencetitle:`
+        font-size:2.4rem;
+        line-height:3.2rem;
+        letter-spacing:.2rem;
+        font-weight:700;
     `
 }

@@ -11,6 +11,7 @@ import {
 } from './ProductMainElements'
 import AddCart from './AddCart';
 
+
 const Product = () => {
     return (
         <ProductWrapper>
@@ -19,6 +20,7 @@ const Product = () => {
                     width="540" 
                     height="560"
                     src={require('../../../assets/product-xx99-mark-two-headphones/desktop/image-product.jpg').default}
+                    alt="headphones"
                 />
             </ProductImgWrapper>
             <PorudctDetails>

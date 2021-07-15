@@ -5,37 +5,19 @@ import {
 } from './ProductMainElements';
 import Product from './Product'
 import GoBackBtn from './GoBackBtn'
+import Features from './Features'
+import Gallery from './Gallery'
+import Preference from './Preference';
 
-//Probably need to break the structure down to several small components
-//This is too much, probably hard to maintain later.
-//
-//Basic structure is done though. 
 const ProductMain = () => {
     return (
         <ProductMainContainer>
             <ProductMainWrapper>
                 <GoBackBtn />
                 <Product />
-
-{/* 
-                <ProductMainDesc>
-                    <Features>
-                        <FeaturesTitle></FeaturesTitle>
-                        <FeaturesText></FeaturesText>
-                    </Features>
-                    <InTheBox>
-                        <InTheBoxTitle></InTheBoxTitle>
-                        Loop in the box insde
-                        <InTheBoxDesc><IntheBoxNum></IntheBoxNum></InTheBoxDesc>
-                    </InTheBox>
-                </ProductMainDesc>
-                <ProductMainGallery>
-                    Use Grid here.
-                    <ProductMainImg1 alt=''/>
-                    <ProductMainImg2 alt=''/>
-                    <ProductMainImg3 alt=''/>
-                </ProductMainGallery>
-                 */}
+                <Features />
+                <Gallery />
+                <Preference />
             </ProductMainWrapper>
         </ProductMainContainer>
     )

@@ -115,17 +115,5 @@ const GlobalStyle = createGlobalStyle`
         letter-spacing:.2rem;
         text-transform: uppercase;
     }
-    h5{
-        font-size:2.4rem;
-        line-height:3.3rem;
-        letter-spacing:.17rem;
-        text-transform: uppercase;
-    }
-    h6{
-        font-size:1.8rem;
-        line-height:2.4rem;
-        letter-spacing:.13em;
-        text-transform: uppercase;
-    }
 `
 export default GlobalStyle
