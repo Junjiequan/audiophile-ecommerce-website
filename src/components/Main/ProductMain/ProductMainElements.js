@@ -137,30 +137,36 @@ export const AddCartAmount = Styled.span`
     position:relative;
     user-select:none;
 `
-export const AddCartDecrease = Styled.span`
+export const AddCartDecrease = Styled.button`
     position:absolute;
     display:flex;
     justify-content:Center;
-    width:5rem;
-    left:0;
+    width:4rem;
+    left:1rem;
     cursor:pointer;
     color:hsla(0,0%,0%,0.3);
     transition:color ${TRANSITION.ease};
     &:hover{
         color:${COLORS.brownDark};
     }
+    &:focus-visible{
+        outline-offset:0;
+    }
 `
-export const AddCartIncrease = Styled.span`
+export const AddCartIncrease = Styled.button`
     position:absolute;
     display:flex;
     justify-content:Center;
-    width:5rem;
+    width:4rem;
     cursor:pointer;
-    right:0;
+    right:1rem;
     color:hsla(0,0%,0%,0.3);
     transition:color ${TRANSITION.ease};
     &:hover{
         color:${COLORS.brownDark};
+    }
+    &:focus-visible{
+        outline-offset:0;
     }
 `
 export const AddCartBtn = Styled.button`

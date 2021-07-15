@@ -16,7 +16,6 @@ import "aos/dist/aos.css";
 const App = () => {
   Aos.init();
   const location = useLocation();
-  console.log(location.pathname)
   return (
       <>
       <GlobalStyle />
