@@ -14,7 +14,7 @@ const ProductDetail = () => {
     useEffect(()=>{
         const fetchJSON = async()=>{
             try{
-                const resp = await fetch("http://www.json-generator.com/api/json/get/cpKdlexPEy?indent=2",{});
+                const resp = await fetch("https://www.json-generator.com/api/json/get/cpKdlexPEy?indent=2",{});
                 if(!resp.ok){
                     throw new Error('fetching data failed')
                 };
