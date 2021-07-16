@@ -2,7 +2,7 @@ import Styled from 'styled-components'
 import HeroBg from '../../../assets/home/desktop/image-hero.jpg'
 import HeroBgMD from '../../../assets/home/tablet/image-header.jpg'
 import HeroBgSM from '../../../assets/home/mobile/image-header.jpg'
-import { SPACE,WIDTH,COLORS,FONT,TRANSITION,DEVICE,HEIGHT } from '../../../Constants'
+import { SPACE,WIDTH,COLORS,FONT,TRANSITION,DEVICE } from '../../../Constants'
 import { ANIMATION } from '../../../Animation'
 
 
@@ -10,6 +10,7 @@ export const HeroContainer = Styled.section`
     display:flex;
     justify-content:center;
     padding:${SPACE.container};
+    margin-top:-9.6rem;
     height:72.8rem;
     background:${COLORS.blackStupid};
     z-index:1;
@@ -36,7 +37,6 @@ export const HeroDesc = Styled.div`
     justify-content:center;
     max-width:39.8rem;
     width:100%;
-    margin-top:${HEIGHT.navHeight};
     color:${COLORS.white};
     background:transparent;
     z-index:2;

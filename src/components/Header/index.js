@@ -14,8 +14,9 @@ import Logo from '../../assets/shared/desktop/logo.svg'
 const Header = () => {
     const location = useLocation();
     let isHomePage = location.pathname === '/';
+    
     return (
-        <HeaderContainer bgColor={isHomePage}>
+        <HeaderContainer bgColor={isHomePage} >
             <HeaderWrapper borderBot={true}>
                 <HeaderLogo to="/">
                     <LogoImg src={Logo} alt="audiophile logo"/>

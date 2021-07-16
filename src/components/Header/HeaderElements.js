@@ -16,11 +16,11 @@ const headerBorderBottom = `
 `
 
 export const HeaderContainer = Styled.header`
-    position:absolute;
+    position:sticky;
     top:0;
     width:100%;
-    height:9.6rem;
-    background:${prop=> prop.bgColor?'transparent':`${COLORS.black}`};
+    height:100%;
+    background:${prop=> prop.bgColor? 'rgb(25,25,25)': `${COLORS.black}`};
     display:flex;
     justify-content:center;
     padding:${SPACE.navDeskContainerPadding};

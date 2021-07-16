@@ -1,10 +1,9 @@
 import Styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
-import { HEIGHT,WIDTH,SPACE,COLORS,TRANSITION,DEVICE,FONT } from '../../../Constants';
+import { WIDTH,SPACE,COLORS,TRANSITION,DEVICE,FONT } from '../../../Constants';
 
 
 export const ProductMainContainer = Styled.section`
-    margin-top:${HEIGHT.navHeight};
     padding:${SPACE.container};
     display:flex;
     justify-content:center;

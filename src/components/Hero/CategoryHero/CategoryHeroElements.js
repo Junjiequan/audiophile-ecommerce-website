@@ -18,7 +18,7 @@ export const CategoryHeroWrapper = Styled.div`
     display:flex;
     align-items:flex-end;
     justify-content:center;
-    height:33.6rem;
+    height:23.9rem;
     @media screen and ${DEVICE.sm}{
         height:19.2rem;
     }
