@@ -15,9 +15,9 @@ const Preference = ( {data} ) => {
             <PreferenceTitle>you may also like</PreferenceTitle>
             <PreferenceProductWrapper>
                 {
-                    data.preference.map(item=>{
+                    data.preference.map((item,index)=>{
                         return(
-                            <PreferenceProduct>
+                            <PreferenceProduct key={index}>
                                 <PreferenceItem 
                                     width="350"
                                     height="318"

@@ -9,7 +9,7 @@ export const CategoryHeroContainer = Styled.section`
     background:${COLORS.black};
     transform:translateY(-23.9rem);
     @media screen and ${DEVICE.sm}{
-        transform:translateY(-9.5rem);
+        transform:translateY(-10.5rem);
     }
 `
 export const CategoryHeroWrapper = Styled.div`
@@ -20,7 +20,7 @@ export const CategoryHeroWrapper = Styled.div`
     justify-content:center;
     height:23.9rem;
     @media screen and ${DEVICE.sm}{
-        height:19.2rem;
+        height:10.6rem;
     }
 `
 export const CategoryHeroH1 = Styled.h1`

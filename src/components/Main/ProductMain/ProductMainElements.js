@@ -1,5 +1,4 @@
 import Styled from 'styled-components';
-import { Link as LinkR } from 'react-router-dom';
 import { WIDTH,SPACE,COLORS,TRANSITION,DEVICE,FONT } from '../../../Constants';
 
 
@@ -18,7 +17,8 @@ export const ProductMainWrapper = Styled.div`
             //GoBackBtn component
 ////////////////////////////////////////////////
 
-export const Button = Styled(LinkR)`
+export const Button = Styled.button`
+    cursor:pointer;
     display:block;
     width:5.7rem;
     margin:7.9rem 0 5.6rem;
@@ -271,7 +271,7 @@ export const InTheBoxDescWrapper=Styled.div`
 export const InTheBoxDesc=Styled.p`
     display:flex;
 `
-export const IntheBoxNum=Styled.div`
+export const IntheBoxNum=Styled.span`
     user-select:none;
     font-weight:700;
     color:${COLORS.brownDark};

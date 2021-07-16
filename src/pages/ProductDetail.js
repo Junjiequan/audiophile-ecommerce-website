@@ -27,7 +27,7 @@ const ProductDetail = () => {
             }
         }
         fetchJSON();
-    },[location]);
+    },[]);
 
     return (
         <>

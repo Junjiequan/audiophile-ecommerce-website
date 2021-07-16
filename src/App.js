@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch,Route,useLocation } from 'react-router-dom'
+import { Switch,Route } from 'react-router-dom'
 import ScrollToTop from './ScrollToTop'
 import  GlobalStyle  from './GlobalStyle'
 import Header from './components/Header/'
@@ -15,7 +15,6 @@ import "aos/dist/aos.css";
 
 const App = () => {
   Aos.init();
-  const location = useLocation();
   return (
       <>
       <GlobalStyle />

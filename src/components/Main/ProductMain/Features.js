@@ -27,8 +27,8 @@ const Features = ({data}) => {
                 <InTheBoxTitle>in the box</InTheBoxTitle>
                 <InTheBoxDescWrapper>
                     { 
-                        data.inTheBox.map(item=>{
-                            return <InTheBoxDesc><IntheBoxNum>{item[0]}</IntheBoxNum>{item[1]}</InTheBoxDesc>
+                        data.inTheBox.map((item,index)=>{
+                            return <InTheBoxDesc key={index}><IntheBoxNum>{item[0]}</IntheBoxNum>{item[1]}</InTheBoxDesc>
                         })
                     }
                 </InTheBoxDescWrapper>
