@@ -30,7 +30,7 @@ const Hero = () => {
                         data-aos-duration="700" 
                         data-text="see product" 
                         aria-label="link to product page"
-                        to="/product_detail/headphone_xx99_mark_II"
+                        to="/product_detail/xx99-mark-ii"
                     />
                 </HeroDesc>
                 <HeroImg aria-label="giant headphone image on background" />

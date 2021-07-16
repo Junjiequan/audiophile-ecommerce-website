@@ -7,24 +7,27 @@ import {
 } from './ProductMainElements'
 
 
-const Gallery = () => {
+const Gallery = ({data}) => {
+    // data.gallery contain 3 arrays [[url,alt],[url,alt],[url,alt]]
+    // data.gallery[0][0] = image URL
+    // data.gallery[0][1] = image ALT
     return (
         <GalleryWrapper>
             <GalleryImg1
                 width="445"
                 height="280" 
-                src={require('../../../assets/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg').default}
-                alt=''/>
+                src={require(`../../../assets/${data.gallery[0][0]}`).default}
+                alt={data.gallery[0][1]}/>
             <GalleryImg2
                 width="445"
                 height="280"  
-                src={require('../../../assets/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg').default}
-                alt=''/>
+                src={require(`../../../assets/${data.gallery[1][0]}`).default}
+                alt={data.gallery[1][1]}/>
             <GalleryImg3
                 width="635"
                 height="592"  
-                src={require('../../../assets/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg').default}
-                alt=''/>
+                src={require(`../../../assets/${data.gallery[2][0]}`).default}
+                alt={data.gallery[2][1]}/>
         </GalleryWrapper>
     )
 }

@@ -4,13 +4,17 @@ import {
     Button
 } from './ProductMainElements'
 
-
 const GoBackBtn = () => {
+
     const history = useHistory();
-    const goBack = () => history.goBack();
+    const goBack = () =>{
+        history.goBack();
+    };
 
     return (
+        <>
         <Button onClick={goBack}>Go Back</Button>
+        </>
     )
 }
 

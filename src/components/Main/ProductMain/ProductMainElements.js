@@ -141,7 +141,8 @@ export const AddCartDecrease = Styled.button`
     position:absolute;
     display:flex;
     justify-content:Center;
-    width:4rem;
+    width:3rem;
+    font-size:1.8rem;
     left:1rem;
     cursor:pointer;
     color:hsla(0,0%,0%,0.3);
@@ -149,24 +150,19 @@ export const AddCartDecrease = Styled.button`
     &:hover{
         color:${COLORS.brownDark};
     }
-    &:focus-visible{
-        outline-offset:0;
-    }
 `
 export const AddCartIncrease = Styled.button`
     position:absolute;
     display:flex;
+    font-size:1.8rem;
     justify-content:Center;
-    width:4rem;
+    width:3rem;
     cursor:pointer;
     right:1rem;
     color:hsla(0,0%,0%,0.3);
     transition:color ${TRANSITION.ease};
     &:hover{
         color:${COLORS.brownDark};
-    }
-    &:focus-visible{
-        outline-offset:0;
     }
 `
 export const AddCartBtn = Styled.button`

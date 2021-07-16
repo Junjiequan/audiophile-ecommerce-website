@@ -9,38 +9,26 @@ import{
     PreferenceItemName
 } from './ProductMainElements'
 
-const Preference = () => {
+const Preference = ( {data} ) => {
     return (
         <PreferenceWrapper>
             <PreferenceTitle>you may also like</PreferenceTitle>
             <PreferenceProductWrapper>
-                <PreferenceProduct>
-                    <PreferenceItem 
-                        width="350"
-                        height="318"
-                        src={require('../../../assets/product-xx99-mark-two-headphones/desktop/image-product.jpg').default}
-                    />
-                    <PreferenceItemName>XX99 MARK I</PreferenceItemName>
-                    <GlobalBtnBrown data-text="see product"/>
-                </PreferenceProduct>
-                <PreferenceProduct>
-                    <PreferenceItem 
-                        width="350"
-                        height="318"
-                        src={require('../../../assets/product-yx1-earphones/desktop/image-product.jpg').default}
-                    />
-                    <PreferenceItemName>XX59</PreferenceItemName>
-                    <GlobalBtnBrown data-text="see product"/>
-                </PreferenceProduct>
-                <PreferenceProduct>
-                    <PreferenceItem 
-                        width="350"
-                        height="318"
-                        src={require('../../../assets/product-xx59-headphones/desktop/image-product.jpg').default}
-                    />
-                    <PreferenceItemName>ZX9 SPEAKER</PreferenceItemName>
-                    <GlobalBtnBrown data-text="see product"/>
-                </PreferenceProduct>
+                {
+                    data.preference.map(item=>{
+                        return(
+                            <PreferenceProduct>
+                                <PreferenceItem 
+                                    width="350"
+                                    height="318"
+                                    src={require(`../../../assets/${item.url}`).default}
+                                />
+                                <PreferenceItemName>{item.product}</PreferenceItemName>
+                                <GlobalBtnBrown data-text="see product" to={item.link}/>
+                            </PreferenceProduct>
+                        )
+                    })
+                }
             </PreferenceProductWrapper>
         </PreferenceWrapper>
     )

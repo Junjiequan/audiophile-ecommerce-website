@@ -12,29 +12,27 @@ import {
 import AddCart from './AddCart';
 
 
-const Product = () => {
+const Product = ({data}) => {
     return (
         <ProductWrapper>
             <ProductImgWrapper>
                 <ProductImg 
                     width="540" 
                     height="560"
-                    src={require('../../../assets/product-xx99-mark-two-headphones/desktop/image-product.jpg').default}
+                    src={require(`../../../assets/${data.productIMG}`).default}
                     alt="headphones"
                 />
             </ProductImgWrapper>
             <PorudctDetails>
-                <ProductFeature>new product</ProductFeature>
+                <ProductFeature>{data.feature}</ProductFeature>
                 <ProductTitle>
-                    XX99 Mark II Headphones
+                    {data.product}
                 </ProductTitle>
                 <ProductInfo>
-                    The new XX99 Mark II headphones is the pinnacle of pristine audio. 
-                    It redefines your premium headphone experience by reproducing the 
-                    balanced depth and precision of studio-quality sound.
+                    {data.info}
                 </ProductInfo>
                 <ProductPrice>
-                    $ 2,999
+                    {data.price}
                 </ProductPrice>
                 <AddCart />
             </PorudctDetails>

@@ -9,15 +9,16 @@ import Features from './Features'
 import Gallery from './Gallery'
 import Preference from './Preference';
 
-const ProductMain = () => {
+
+const ProductMain = ( {data} ) => {
     return (
-        <ProductMainContainer>
+        <ProductMainContainer data-aos="fade" data-aos-duration="600">
             <ProductMainWrapper>
                 <GoBackBtn />
-                <Product />
-                <Features />
-                <Gallery />
-                <Preference />
+                <Product data={data}/>
+                <Features data={data}/>
+                <Gallery data={data}/>
+                <Preference data={data}/>
             </ProductMainWrapper>
         </ProductMainContainer>
     )
