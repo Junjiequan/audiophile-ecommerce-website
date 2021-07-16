@@ -12,7 +12,7 @@ import Preference from './Preference';
 
 const ProductMain = ( {data} ) => {
     return (
-        <ProductMainContainer data-aos="fade" data-aos-duration="600">
+        <ProductMainContainer data-aos="fade" data-aos-duration="1000">
             <ProductMainWrapper>
                 <GoBackBtn />
                 <Product data={data}/>

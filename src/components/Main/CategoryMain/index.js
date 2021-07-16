@@ -37,7 +37,7 @@ const CategoryMain = ({data}) => {
                             <ProductDetail>
                                 {item.detail}
                             </ProductDetail>
-                            <GlobalBtnBrown data-text="see product" aria-label={item.label}/>
+                            <GlobalBtnBrown data-text="see product" aria-label={item.label} to={item.link}/>
                         </ProductInfo>
                     </CategoryMainProduct>
                 )

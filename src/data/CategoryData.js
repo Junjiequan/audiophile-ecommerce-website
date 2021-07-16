@@ -7,6 +7,7 @@ export const HEADPHONES = [
         alt:`XX99 Mark II Headphone product image`,
         src:`category-headphones/desktop/image-xx99-mark-two.jpg`,
         price:'$2,999',
+        link:'/product_detail/xx99-mark-ii'
     },
     {
         product:'XX99 Mark I\nHeadphones',
@@ -16,6 +17,7 @@ export const HEADPHONES = [
         alt:`XX99 Mark II Headphone product image`,
         src:`category-headphones/desktop/image-xx99-mark-one.jpg`,
         price:'$1,750',
+        link:'/product_detail/xx99-mark-i'
     },
     {
         product: 'XX59\nHeadphones',
@@ -25,6 +27,7 @@ export const HEADPHONES = [
         alt:`XX59 Headphone product image`,
         src:`category-headphones/desktop/image-xx59.jpg`,
         price:'$899',
+        link:'/product_detail/xx59'
     },
 ]
 export const SPEAKERS = [
@@ -35,7 +38,8 @@ export const SPEAKERS = [
         label:`link to ZX9 Speaker product detail page`,
         alt:`ZX9 Speaker product image`,
         src:`category-speakers/desktop/image-zx9.jpg`,
-        price:'$4,500'
+        price:'$4,500',
+        link:'/product_detail/zx9'
     },
     {
         product: 'ZX7\nSpeaker',
@@ -44,7 +48,8 @@ export const SPEAKERS = [
         label: `link to ZX7 Speaker product detail page`,
         alt:`ZX7 Speaker product image`,
         src:`category-speakers/desktop/image-zx7.jpg`,
-        price:'$3,500'
+        price:'$3,500',
+        link:'/product_detail/zx7'
     },
 
 ]
@@ -56,6 +61,7 @@ export const EARPHONES = [
         label: `link to XYX1 Wireless Earphone product detail page`,
         alt:`YX1 Wireless Earphones product image`,
         src:`category-earphones/desktop/image-yx1-earphones.jpg`,
-        price:'$599'
+        price:'$599',
+        link:'/product_detail/yx1'
     }
 ]
