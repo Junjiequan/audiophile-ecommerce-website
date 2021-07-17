@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useState}from 'react'
 import { Switch,Route } from 'react-router-dom'
 import ScrollToTop from './ScrollToTop'
 import  GlobalStyle  from './GlobalStyle'
@@ -15,6 +15,15 @@ import "aos/dist/aos.css";
 
 const App = () => {
   Aos.init();
+
+  const [data,setData] = useState();
+  const [qty,setQty] = useState();
+
+  const onAdd = (product)=> setData(product);
+  const handleQty = (qty)=> setQty(qty);
+  
+  console.log(data);
+  console.log(qty);
   return (
       <>
       <GlobalStyle />
@@ -26,7 +35,9 @@ const App = () => {
         <Route path="/speakers" component={Speakers} />
         <Route path="/earphones" component={Earphones} />
         {/* /product_detail/${CREATE CURRENT PAGE} : Probably will work this way? will give it a try after off work tomorrow */}
-        <Route path="/product_detail/:id" component={ProductDetail} />
+        <Route path="/product_detail/:id">
+          <ProductDetail onAdd={onAdd} handleQty={handleQty}/>
+        </Route>
       </Switch>
       <Footer />
       </>

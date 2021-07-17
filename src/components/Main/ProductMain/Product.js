@@ -12,7 +12,7 @@ import {
 import AddCart from './AddCart';
 
 
-const Product = ({data}) => {
+const Product = ({data,onAdd,handleQty}) => {
     return (
         <ProductWrapper>
             <ProductImgWrapper>
@@ -34,7 +34,7 @@ const Product = ({data}) => {
                 <ProductPrice>
                     {data.price}
                 </ProductPrice>
-                <AddCart />
+                <AddCart onAdd={onAdd} handleQty={handleQty} data={data}/>
             </PorudctDetails>
         </ProductWrapper>
     )

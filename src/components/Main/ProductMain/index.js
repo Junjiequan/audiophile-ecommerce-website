@@ -10,12 +10,13 @@ import Gallery from './Gallery'
 import Preference from './Preference';
 
 
-const ProductMain = ( {data} ) => {
+const ProductMain = ( {data,onAdd,handleQty} ) => {
     return (
         <ProductMainContainer data-aos="fade" data-aos-duration="1000">
             <ProductMainWrapper>
                 <GoBackBtn />
-                <Product data={data}/>
+                {/* AddCart button included in Product component */}
+                <Product data={data} onAdd={onAdd} handleQty={handleQty}/>
                 <Features data={data}/>
                 <Gallery data={data}/>
                 <Preference data={data}/>
