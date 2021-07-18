@@ -1,15 +1,17 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom';
-import Cart  from '../Cart/'
 import{
     HeaderContainer,
     HeaderWrapper,
     HeaderLogo,
     LogoImg,
     HeaderNav,
-    HeaderNavLink
+    HeaderNavLink,
+    CartWrapper,
+    CartIcon
 } from './HeaderElements';
 import Logo from '../../assets/shared/desktop/logo.svg'
+import CartImg from '../../assets/shared/desktop/icon-cart.svg'
 
 const Header = () => {
     const location = useLocation();
@@ -27,7 +29,9 @@ const Header = () => {
                     <HeaderNavLink to="/speakers" exact={true} data-active="active" aria-label="link to speakers page">speakers</HeaderNavLink>
                     <HeaderNavLink to="/earphones" exact={true} data-active="active" aria-label="link to earphones page">earphones</HeaderNavLink>
                 </HeaderNav>
-                <Cart />
+                <CartWrapper>
+                    <CartIcon src={CartImg} alt="cart icon image"/>
+                </CartWrapper>
             </HeaderWrapper>
         </HeaderContainer>
     )

@@ -8,15 +8,14 @@ import {
 } from './ProductMainElements'
 
 
-const AddCart = ({data,onAdd,handleQty}) => {
+const AddCart = ({data,onAdd}) => {
     const [counter,setCounter] = useState(1);
     const IncreaseCounter = () => setCounter(counter + 1);
     const DecreaseCounter = () => setCounter(counter - 1);
     if(counter < 1) setCounter(1);
 
     const handleCartData = ()=>{
-        onAdd(data);
-        handleQty(counter);
+        onAdd(data,counter);
     }
 
     return (
@@ -26,7 +25,7 @@ const AddCart = ({data,onAdd,handleQty}) => {
                     {counter}
                 <AddCartIncrease onClick={IncreaseCounter}>+</AddCartIncrease>
             </AddCartAmount>
-            <AddCartBtn data-text="add to cart" onClick={()=> handleCartData()}/>
+            <AddCartBtn data-text="add to cart" onClick={handleCartData}/>
         </AddCartWrapper>
     )
 }

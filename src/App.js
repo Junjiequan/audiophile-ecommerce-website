@@ -16,14 +16,11 @@ import "aos/dist/aos.css";
 const App = () => {
   Aos.init();
 
-  const [data,setData] = useState();
-  const [qty,setQty] = useState();
+  const [data,setData] = useState( {item:'',quantity:0} );
 
-  const onAdd = (product)=> setData(product);
-  const handleQty = (qty)=> setQty(qty);
+  const onAdd = (product,number)=> setData({item:product,quantity:number});
   
   console.log(data);
-  console.log(qty);
   return (
       <>
       <GlobalStyle />
@@ -36,7 +33,7 @@ const App = () => {
         <Route path="/earphones" component={Earphones} />
         {/* /product_detail/${CREATE CURRENT PAGE} : Probably will work this way? will give it a try after off work tomorrow */}
         <Route path="/product_detail/:id">
-          <ProductDetail onAdd={onAdd} handleQty={handleQty}/>
+          <ProductDetail onAdd={onAdd}/>
         </Route>
       </Switch>
       <Footer />

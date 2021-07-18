@@ -24,7 +24,7 @@ export const HeaderContainer = Styled.header`
     display:flex;
     justify-content:center;
     padding:${SPACE.navDeskContainerPadding};
-    z-index:999;
+    z-index:9999;
 `
 export const HeaderWrapper = Styled.div`
     margin:${SPACE.wrapper};
@@ -77,4 +77,15 @@ export const HeaderNavLink = Styled(NavLink)`
     &.${props=> props["data-active"]}{
         background-position: 0%;
     }
+`
+export const CartWrapper = Styled.button`
+    display:flex;
+    justify-content:center;
+    cursor:pointer;
+`
+export const CartIcon = Styled.img`
+    pointer-events:none;
+    width:2.3rem;
+    min-width:2.2rem;
+    height:2rem;
 `
