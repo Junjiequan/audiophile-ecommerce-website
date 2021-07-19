@@ -9,6 +9,7 @@ import Headphones from './pages/Category/Headphones'
 import Speakers from './pages/Category/Speakers'
 import Earphones from './pages/Category/Earphones'
 import ProductDetail from './pages/ProductDetail'
+import CartModal from './components/CartModal'
 import Aos from 'aos';
 import "aos/dist/aos.css";
 
@@ -17,21 +18,19 @@ const App = () => {
   Aos.init();
 
   const [data,setData] = useState( {item:'',quantity:0} );
+  const onAdd = (product,number) => setData({item:product,quantity:number});
 
-  const onAdd = (product,number)=> setData({item:product,quantity:number});
-  
-  console.log(data);
   return (
       <>
       <GlobalStyle />
       <ScrollToTop />
+      <CartModal />
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/headphones" component={Headphones} />
         <Route path="/speakers" component={Speakers} />
         <Route path="/earphones" component={Earphones} />
-        {/* /product_detail/${CREATE CURRENT PAGE} : Probably will work this way? will give it a try after off work tomorrow */}
         <Route path="/product_detail/:id">
           <ProductDetail onAdd={onAdd}/>
         </Route>
