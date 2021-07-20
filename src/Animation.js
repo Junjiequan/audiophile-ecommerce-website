@@ -23,4 +23,12 @@ export const ANIMATION = {
     75% {transform: scale3d(1.05, 0.95, 1);}
     100% {transform: scale3d(1, 1, 1);}
     `,
+    fadeIn:keyframes`
+    from {
+    opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }    
+    `
 }

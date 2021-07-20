@@ -1,6 +1,6 @@
-import React,{useEffect,useState} from 'react' 
+import React,{useEffect} from 'react' 
 import { useSelector, useDispatch } from 'react-redux'
-import { toggleModal } from '../../actions'
+import { toggleModal,increment,decrement } from '../../actions'
 import {
     CartModalContainer,
     CartModalWrapper,
@@ -24,7 +24,9 @@ import {
 
 const Cart = () => {
     const isModalToggle = useSelector(state=>state.modalToggle)
+    const counter = useSelector(state=>state.counter);
     const dispatch = useDispatch();
+
     useEffect(()=>{
         document.addEventListener('click',e=>{
             const isOverlay = e.target.getAttribute('data-container') === 'true'
@@ -34,24 +36,25 @@ const Cart = () => {
             }
         })
     },[]);
+
     return (
-        <CartModalContainer data-display={isModalToggle} data-container>
+        <CartModalContainer data-display={isModalToggle} data-container >
             <CartModalWrapper data-container>
-                <Modal data-modal="true">
-                    <FirstRow>
-                        <Amount> Cart (2)</Amount>
+                <Modal data-display={isModalToggle}>
+                    <FirstRow >
+                        <Amount> Cart (1)</Amount>
                         <RemoveBtn> Remove all</RemoveBtn>
                     </FirstRow>
-                    <Items>
+                    <Items >
                         <ItemImg width="64" height="64" src={require('../../assets/cart/image-xx99-mark-two-headphones.jpg').default} alt="random image"/>
                         <ItemInfo>
                             XX99 MK II<br />
                             <ItemPrice>$2,999</ItemPrice>
                         </ItemInfo>
                         <ItemAmount>
-                            <ItemDecrement >-</ItemDecrement>
-                                1
-                            <ItemIncrement >+</ItemIncrement>
+                            <ItemDecrement onClick={()=>dispatch(decrement())}>-</ItemDecrement>
+                                {counter}
+                            <ItemIncrement onClick={()=>dispatch(increment())}>+</ItemIncrement>
                         </ItemAmount>
                     </Items>
                     <Total>

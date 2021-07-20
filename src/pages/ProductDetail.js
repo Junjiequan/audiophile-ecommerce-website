@@ -5,7 +5,7 @@ import Banner from '../components/Banner'
 import ProductNav from '../components/ProductNav'
 import IsLoading from '../IsLoading'
 
-const ProductDetail = ( {onAdd,handleQty} ) => {
+const ProductDetail = ( ) => {
     const [isLoading, setIsLoading] = useState(true);
     const [data, setData] = useState();
     const location = useLocation();
@@ -34,7 +34,7 @@ const ProductDetail = ( {onAdd,handleQty} ) => {
             {
                 isLoading
                 ? <IsLoading />
-                : <ProductMain data={data} onAdd={onAdd} handleQty={handleQty}/>
+                : <ProductMain data={data} />
             }
             <ProductNav />
             <Banner />

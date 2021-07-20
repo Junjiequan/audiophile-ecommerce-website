@@ -1,5 +1,6 @@
 import Styled from 'styled-components'
-import { COLORS, WIDTH,TRANSITION} from '../../Constants'
+import { COLORS, WIDTH, TRANSITION} from '../../Constants'
+import { ANIMATION } from '../../Animation';
 import { Link as LinkR } from 'react-router-dom';
 
 
@@ -10,6 +11,7 @@ export const CartModalContainer = Styled.div`
     height:100%;
     background-color: hsla(0,0%,0%,0.5);
     display:${props=>props['data-display'] ? 'flex' : 'none'};
+    animation: ${ANIMATION.fadeIn} 0.5s ease-in-out forwards;
     justify-content:center;
 `
 export const CartModalWrapper = Styled.div`
@@ -28,6 +30,8 @@ export const Modal = Styled.div`
     background:white;
     border-radius:8px;
     padding:3.1rem 3.3rem;
+    transition: opacity ${TRANSITION.ease};
+    animation: ${ANIMATION.fadeIn} 0.5s ease-in-out forwards;
 `
 export const FirstRow = Styled.div`
     width:100%;

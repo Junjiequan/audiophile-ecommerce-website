@@ -1,4 +1,6 @@
-import React,{useState} from 'react'
+import React from 'react'
+import {useSelector,useDispatch} from 'react-redux';
+import { increment, decrement, addProduct } from '../../../actions';
 import {
     AddCartWrapper,
     AddCartAmount,
@@ -8,24 +10,17 @@ import {
 } from './ProductMainElements'
 
 
-const AddCart = ({data,onAdd}) => {
-    const [counter,setCounter] = useState(1);
-    const IncreaseCounter = () => setCounter(counter + 1);
-    const DecreaseCounter = () => setCounter(counter - 1);
-    if(counter < 1) setCounter(1);
-
-    const handleCartData = ()=>{
-        onAdd(data,counter);
-    }
-
+const AddCart = ({data}) => {
+    const counter = useSelector(state=>state.counter);
+    const dispatch = useDispatch();
     return (
         <AddCartWrapper>
             <AddCartAmount>
-                <AddCartDecrease onClick={DecreaseCounter}>-</AddCartDecrease>
+                <AddCartDecrease onClick={()=> dispatch(decrement())}>-</AddCartDecrease>
                     {counter}
-                <AddCartIncrease onClick={IncreaseCounter}>+</AddCartIncrease>
+                <AddCartIncrease onClick={()=> dispatch(increment())}>+</AddCartIncrease>
             </AddCartAmount>
-            <AddCartBtn data-text="add to cart" onClick={handleCartData}/>
+            <AddCartBtn data-text="add to cart" onClick={()=> dispatch(addProduct(data,counter))} />
         </AddCartWrapper>
     )
 }

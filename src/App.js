@@ -17,15 +17,15 @@ import "aos/dist/aos.css";
 const App = () => {
   Aos.init();
 
-  const [data,setData] = useState( {item:'',quantity:0} );
-  const onAdd = (product,number) => setData({item:product,quantity:number});
+  const [data,setData] = useState( {item:''} );
+  const onAdd = (product) => setData({item:product});
 
 
   return (
       <>
       <GlobalStyle />
       <ScrollToTop  />
-      <CartModal />
+      <CartModal/>
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
