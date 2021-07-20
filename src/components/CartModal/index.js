@@ -1,4 +1,4 @@
-import React, { useState , useEffect} from 'react'
+import React,{useEffect,useState} from 'react'
 import {
     CartModalContainer,
     CartModalWrapper,
@@ -21,9 +21,16 @@ import {
  
 
 const Cart = () => {
-
+    const [show,setShow] = useState(true);
+    useEffect(()=>{
+        document.addEventListener('click',(e)=>{
+            if(e.target.getAttribute('data-container') === 'true'){
+                setShow(!show);
+            }
+        })
+    },[show]);
     return (
-        <CartModalContainer data-display={true} data-container>
+        <CartModalContainer data-display={show} data-container>
             <CartModalWrapper data-container>
                 <Modal data-modal="true">
                     <FirstRow>
@@ -46,7 +53,7 @@ const Cart = () => {
                         <TotalP>Total</TotalP>
                         <TotalCost>$5,999</TotalCost>
                     </Total>
-                    <CheckOutBtn data-text="checkout"/>
+                    <CheckOutBtn data-text="checkout" to="/"/>
                 </Modal>
             </CartModalWrapper>
         </CartModalContainer>

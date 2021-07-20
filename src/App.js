@@ -20,10 +20,11 @@ const App = () => {
   const [data,setData] = useState( {item:'',quantity:0} );
   const onAdd = (product,number) => setData({item:product,quantity:number});
 
+
   return (
       <>
       <GlobalStyle />
-      <ScrollToTop />
+      <ScrollToTop  />
       <CartModal />
       <Header />
       <Switch>

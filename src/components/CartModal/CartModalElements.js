@@ -9,7 +9,7 @@ export const CartModalContainer = Styled.div`
     width:100%;
     height:100%;
     background-color: hsla(0,0%,0%,0.5);
-    display:${props=>props['data-display']?'flex':'none'};
+    display:${props=>props['data-display'] ? 'flex' : 'none'};
     justify-content:center;
 `
 export const CartModalWrapper = Styled.div`

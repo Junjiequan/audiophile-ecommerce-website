@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { useLocation } from 'react-router-dom';
 import{
     HeaderContainer,
@@ -13,8 +13,8 @@ import{
 import Logo from '../../assets/shared/desktop/logo.svg'
 import CartImg from '../../assets/shared/desktop/icon-cart.svg'
 
-const Header = () => {
 
+const Header = () => {
     const location = useLocation();
     let isHomePage = location.pathname === '/';
 

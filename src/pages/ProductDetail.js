@@ -10,6 +10,7 @@ const ProductDetail = ( {onAdd,handleQty} ) => {
     const [data, setData] = useState();
     const location = useLocation();
     const path = location.pathname.replace('/product_detail/','');
+
     useEffect(()=>{
         const fetchJSON = async()=>{
             try{
@@ -26,7 +27,7 @@ const ProductDetail = ( {onAdd,handleQty} ) => {
             }
         }
         fetchJSON();
-    },[location.pathname]);
+    },[path]);
 
     return (
         <>
