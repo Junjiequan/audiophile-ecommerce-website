@@ -1,5 +1,7 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { toggleModal } from '../../actions'
 import{
     HeaderContainer,
     HeaderWrapper,
@@ -13,8 +15,9 @@ import{
 import Logo from '../../assets/shared/desktop/logo.svg'
 import CartImg from '../../assets/shared/desktop/icon-cart.svg'
 
-
 const Header = () => {
+    const dispatch = useDispatch();
+
     const location = useLocation();
     let isHomePage = location.pathname === '/';
 
@@ -30,7 +33,7 @@ const Header = () => {
                     <HeaderNavLink to="/speakers" exact={true} data-active="active" aria-label="link to speakers page">speakers</HeaderNavLink>
                     <HeaderNavLink to="/earphones" exact={true} data-active="active" aria-label="link to earphones page">earphones</HeaderNavLink>
                 </HeaderNav>
-                <CartWrapper >
+                <CartWrapper onClick={()=>dispatch(toggleModal())}>
                     <CartIcon src={CartImg} alt="cart icon image"/>
                 </CartWrapper>
             </HeaderWrapper>

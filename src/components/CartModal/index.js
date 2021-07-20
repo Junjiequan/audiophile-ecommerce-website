@@ -1,4 +1,6 @@
-import React,{useEffect,useState} from 'react'
+import React,{useEffect,useState} from 'react' 
+import { useSelector, useDispatch } from 'react-redux'
+import { toggleModal } from '../../actions'
 import {
     CartModalContainer,
     CartModalWrapper,
@@ -18,19 +20,22 @@ import {
     TotalCost,
     CheckOutBtn
 } from './CartModalElements'
- 
+
 
 const Cart = () => {
-    const [show,setShow] = useState(true);
+    const isModalToggle = useSelector(state=>state.modalToggle)
+    const dispatch = useDispatch();
     useEffect(()=>{
-        document.addEventListener('click',(e)=>{
-            if(e.target.getAttribute('data-container') === 'true'){
-                setShow(!show);
+        document.addEventListener('click',e=>{
+            const isOverlay = e.target.getAttribute('data-container') === 'true'
+            const isCheckout = e.target.getAttribute('data-text') === 'checkout'
+            if(isOverlay||isCheckout){
+                dispatch(toggleModal());
             }
         })
-    },[show]);
+    },[]);
     return (
-        <CartModalContainer data-display={show} data-container>
+        <CartModalContainer data-display={isModalToggle} data-container>
             <CartModalWrapper data-container>
                 <Modal data-modal="true">
                     <FirstRow>
@@ -53,7 +58,7 @@ const Cart = () => {
                         <TotalP>Total</TotalP>
                         <TotalCost>$5,999</TotalCost>
                     </Total>
-                    <CheckOutBtn data-text="checkout" to="/"/>
+                    <CheckOutBtn data-text="checkout" to="/" />
                 </Modal>
             </CartModalWrapper>
         </CartModalContainer>
