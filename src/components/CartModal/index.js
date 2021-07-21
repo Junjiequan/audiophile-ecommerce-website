@@ -24,12 +24,11 @@ import {
 
 
 const Cart = () => {
-    const isModalToggle = useSelector(state=>state.modalToggle)
+    const isModalToggle = useSelector(state=>state.modalToggle);
     // const counter = useSelector(state=>state.counter);
     const products = useSelector(state=>state.products.cartItems);
     const dispatch = useDispatch();
-    console.log(products.length)
-    
+
     //click modal outer to close
     useEffect(()=>{
         document.addEventListener('click',e=>{
@@ -39,7 +38,8 @@ const Cart = () => {
                 dispatch(toggleModal());
             }
         })
-    },[]);
+    },[dispatch]);
+
     const displayItems = (item,index)=>{
         const price = item.price.toLocaleString()
         return (
@@ -74,7 +74,7 @@ const Cart = () => {
                             products.length < 1
                             ? 
                             <>
-                                <iframe src="https://giphy.com/embed/nKERd2uhn8hhe" width="180" height="180" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                                <iframe title="random gif" src="https://giphy.com/embed/nKERd2uhn8hhe" width="180" height="180" frameBorder="0" style={{pointerEvents:'none'}}></iframe>
                             </>
                             : products.map(displayItems)
                         }

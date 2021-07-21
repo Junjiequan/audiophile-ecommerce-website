@@ -1,4 +1,4 @@
-import React ,{useState}from 'react'
+import React from 'react'
 import { Switch,Route } from 'react-router-dom'
 import ScrollToTop from './ScrollToTop'
 import  GlobalStyle  from './GlobalStyle'
@@ -17,10 +17,6 @@ import "aos/dist/aos.css";
 const App = () => {
   Aos.init();
 
-  const [data,setData] = useState( {item:''} );
-  const onAdd = (product) => setData({item:product});
-
- 
   return (
       <>
       <GlobalStyle />
@@ -33,7 +29,7 @@ const App = () => {
         <Route path="/speakers" component={Speakers} />
         <Route path="/earphones" component={Earphones} />
         <Route path="/product_detail/:id">
-          <ProductDetail onAdd={onAdd}/>
+          <ProductDetail />
         </Route>
       </Switch>
       <Footer />
