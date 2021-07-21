@@ -1,5 +1,5 @@
 import Styled from 'styled-components'
-import { COLORS, WIDTH, TRANSITION} from '../../Constants'
+import { COLORS, WIDTH, TRANSITION, DEVICE} from '../../Constants'
 import { ANIMATION } from '../../Animation';
 import { Link as LinkR } from 'react-router-dom';
 
@@ -13,6 +13,7 @@ export const CartModalContainer = Styled.div`
     display:${props=>props['data-display'] ? 'flex' : 'none'};
     animation: ${ANIMATION.fadeIn} 0.5s ease-in-out forwards;
     justify-content:center;
+    padding:0 2rem;
 `
 export const CartModalWrapper = Styled.div`
     max-width:${WIDTH.desktop};
@@ -50,12 +51,23 @@ export const RemoveBtn = Styled.button`
         color:${COLORS.brownDark};
     }
 `
-export const Items = Styled.div`
-    width:100%;
-    margin:3.2rem 0;
+export const ItemsWrapper = Styled.ul`
     display:flex;
+    flex-direction:column;
+    width:100%;
     align-items:center;
     justify-content:space-between;
+    margin:2.2rem 0;
+    max-height:60rem;
+    padding-right:.1rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: padding ${TRANSITION.ease};
+`
+export const Items = Styled.li`
+    display:flex;
+    width:100%;
+    margin:1rem;
 `
 export const ItemImg = Styled.img`
     object-fit:cover;
@@ -67,7 +79,11 @@ export const ItemInfo = Styled.p`
     width:100%;
     flex-direction:column;
     font-weight:700;
-    margin:0 1.6rem;
+    margin:0 1.2rem;
+    text-transform:uppercase;
+    @media screen and ${DEVICE.sm}{
+        margin:0 1rem;
+    }
 `
 export const ItemPrice = Styled.span`
     opacity:0.5;
@@ -93,6 +109,9 @@ export const ItemDecrement = Styled.button`
     &:hover{
         color:${COLORS.brownDark};
     }
+    &:focus-visible{
+        outline-offset:-5px;
+    }
 `
 export const ItemIncrement = Styled.button`
     height:100%;
@@ -103,6 +122,9 @@ export const ItemIncrement = Styled.button`
     transition:color ${TRANSITION.ease};
     &:hover{
         color:${COLORS.brownDark};
+    }
+    &:focus-visible{
+        outline-offset:-5px;
     }
 `
 export const Total = Styled.div`

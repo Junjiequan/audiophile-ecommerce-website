@@ -5,7 +5,7 @@ import Banner from '../components/Banner'
 import ProductNav from '../components/ProductNav'
 import IsLoading from '../IsLoading'
 
-const ProductDetail = ( ) => {
+const ProductDetail = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [data, setData] = useState();
     const location = useLocation();
@@ -14,7 +14,7 @@ const ProductDetail = ( ) => {
     useEffect(()=>{
         const fetchJSON = async()=>{
             try{
-                const resp = await fetch("https://api.jsonbin.io/b/60f2122c0cd33f7437ca192d/1",{});
+                const resp = await fetch("https://api.jsonbin.io/b/60f2122c0cd33f7437ca192d/5",{});
                 if(!resp.ok){
                     throw new Error('fetching data failed')
                 };

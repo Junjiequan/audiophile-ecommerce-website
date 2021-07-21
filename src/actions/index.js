@@ -18,9 +18,9 @@ export const toggleModal = ()=>{
 }
 
 //product
-export const getProduct = ()=>{
+export const resProduct = ()=>{
     return {
-        type:'GET_PRODUCT'
+        type:'RES_PRODUCT'
     }
 }
 export const addProduct = (product,unit)=>{

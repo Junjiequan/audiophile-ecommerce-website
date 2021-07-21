@@ -13,6 +13,7 @@ import AddCart from './AddCart';
 
 
 const Product = ({data}) => {
+    const price = data.price.toLocaleString();
     return (
         <ProductWrapper>
             <ProductImgWrapper>
@@ -32,7 +33,7 @@ const Product = ({data}) => {
                     {data.info}
                 </ProductInfo>
                 <ProductPrice>
-                    {data.price}
+                    $ {price}
                 </ProductPrice>
                 <AddCart data={data}/>
             </PorudctDetails>

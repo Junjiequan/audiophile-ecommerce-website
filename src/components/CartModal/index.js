@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react' 
 import { useSelector, useDispatch } from 'react-redux'
-import { toggleModal,increment,decrement } from '../../actions'
+import { toggleModal,addProduct,deleteProduct,resProduct } from '../../actions'
 import {
     CartModalContainer,
     CartModalWrapper,
@@ -8,6 +8,7 @@ import {
     FirstRow,
     Amount,
     RemoveBtn,
+    ItemsWrapper,
     Items,
     ItemImg,
     ItemInfo,
@@ -24,9 +25,12 @@ import {
 
 const Cart = () => {
     const isModalToggle = useSelector(state=>state.modalToggle)
-    const counter = useSelector(state=>state.counter);
+    // const counter = useSelector(state=>state.counter);
+    const products = useSelector(state=>state.products.cartItems);
     const dispatch = useDispatch();
-
+    console.log(products.length)
+    
+    //click modal outer to close
     useEffect(()=>{
         document.addEventListener('click',e=>{
             const isOverlay = e.target.getAttribute('data-container') === 'true'
@@ -36,30 +40,47 @@ const Cart = () => {
             }
         })
     },[]);
-
+    const displayItems = (item,index)=>{
+        const price = item.price.toLocaleString()
+        return (
+            <Items key={index}>
+                <ItemImg width="64" height="64" src={require(`../../assets/${item.cartImg}`).default} alt={item.cartImg}/>
+                <ItemInfo>
+                    {item.short}<br />
+                    <ItemPrice>$ {price}</ItemPrice>
+                </ItemInfo>
+                <ItemAmount>
+                    <ItemDecrement onClick={()=>dispatch(deleteProduct(item))}>-</ItemDecrement>
+                        {item.qty}
+                    <ItemIncrement onClick={()=>dispatch(addProduct(item,1))}>+</ItemIncrement>
+                </ItemAmount>
+            </Items>
+        )
+    }
+    const totalPrice = products.reduce((sum,current)=> sum + current.price * current.qty,0);
     return (
         <CartModalContainer data-display={isModalToggle} data-container >
             <CartModalWrapper data-container>
                 <Modal data-display={isModalToggle}>
                     <FirstRow >
-                        <Amount> Cart (1)</Amount>
-                        <RemoveBtn> Remove all</RemoveBtn>
+                        <Amount> Cart ({products.length})</Amount>
+                        <RemoveBtn onClick={()=> dispatch(resProduct())}> Remove all</RemoveBtn>
                     </FirstRow>
-                    <Items >
-                        <ItemImg width="64" height="64" src={require('../../assets/cart/image-xx99-mark-two-headphones.jpg').default} alt="random image"/>
-                        <ItemInfo>
-                            XX99 MK II<br />
-                            <ItemPrice>$2,999</ItemPrice>
-                        </ItemInfo>
-                        <ItemAmount>
-                            <ItemDecrement onClick={()=>dispatch(decrement())}>-</ItemDecrement>
-                                {counter}
-                            <ItemIncrement onClick={()=>dispatch(increment())}>+</ItemIncrement>
-                        </ItemAmount>
-                    </Items>
+
+                    <ItemsWrapper>
+                        {
+                            products.length < 1
+                            ? 
+                            <>
+                                <iframe src="https://giphy.com/embed/nKERd2uhn8hhe" width="180" height="180" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                            </>
+                            : products.map(displayItems)
+                        }
+                    </ItemsWrapper>
+
                     <Total>
                         <TotalP>Total</TotalP>
-                        <TotalCost>$5,999</TotalCost>
+                        <TotalCost>$ {totalPrice.toLocaleString()}</TotalCost>
                     </Total>
                     <CheckOutBtn data-text="checkout" to="/" />
                 </Modal>
