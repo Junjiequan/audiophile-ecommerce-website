@@ -66,6 +66,7 @@ export const ItemsWrapper = Styled.ul`
 `
 export const Items = Styled.li`
     display:flex;
+    align-items:center;
     width:100%;
     margin:1rem;
 `
@@ -167,7 +168,7 @@ export const CheckOutBtn = Styled(LinkR)`
         align-items:center;
         white-space: nowrap;
         background-size:100% 100%;
-        background-color:${COLORS.brownDark};
+        background-color:${props=>props['data-black']? COLORS.black: COLORS.brownDark};
         transition:height ${TRANSITION.ease};
     }
     &:after{

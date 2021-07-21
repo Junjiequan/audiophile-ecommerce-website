@@ -41,13 +41,12 @@ const Cart = () => {
     },[dispatch]);
 
     const displayItems = (item,index)=>{
-        const price = item.price.toLocaleString()
         return (
             <Items key={index}>
                 <ItemImg width="64" height="64" src={require(`../../assets/${item.cartImg}`).default} alt={item.cartImg}/>
                 <ItemInfo>
                     {item.short}<br />
-                    <ItemPrice>$ {price}</ItemPrice>
+                    <ItemPrice>$ {item.price.toLocaleString()}</ItemPrice>
                 </ItemInfo>
                 <ItemAmount>
                     <ItemDecrement onClick={()=>dispatch(deleteProduct(item))}>-</ItemDecrement>
@@ -84,7 +83,11 @@ const Cart = () => {
                         <TotalP>Total</TotalP>
                         <TotalCost>$ {totalPrice.toLocaleString()}</TotalCost>
                     </Total>
-                    <CheckOutBtn data-text="checkout" to="/" />
+                    {
+                        products.length < 1 
+                        ? <CheckOutBtn data-text="no items in the list" data-black={true} to="/" tabIndex="-1" style={{pointerEvents:'none'}} /> 
+                        : <CheckOutBtn data-text="checkout" data-black={false} to="/checkout" aria-label="to checkout page" /> 
+                    }
                 </Modal>
             </CartModalWrapper>
         </CartModalContainer>

@@ -17,26 +17,7 @@ export const ProductMainWrapper = Styled.div`
             //GoBackBtn component
 ////////////////////////////////////////////////
 
-export const Button = Styled.button`
-    cursor:pointer;
-    display:block;
-    width:5.7rem;
-    margin:7.9rem 0 5.6rem;
-    position:relative;
-    color:hsla(0,0%,0%,.7);
-    &::after{
-        position:absolute;
-        content:'';
-        width:0;
-        left:0;bottom:0;
-        height:2px;
-        background:${COLORS.brownDark};
-        transition:width ${TRANSITION.ease};
-    }
-    &:hover:after{
-        width:100%;
-    }
-`
+
 
 ////////////////////////////////////////////////
             //Product component
