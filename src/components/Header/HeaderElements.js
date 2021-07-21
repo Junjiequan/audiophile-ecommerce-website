@@ -82,6 +82,27 @@ export const CartWrapper = Styled.button`
     display:flex;
     justify-content:center;
     cursor:pointer;
+    position:relative;
+    &:before{
+        pointer-events:none;
+        user-select:none;
+        opacity:${props=>props['data-amount'] < 1 ? 0 : 1 };
+        position:absolute;
+        content:attr(data-amount);
+        font-size:1.3rem;
+        font-weight:700;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        border-radius:100%;
+        background: ${COLORS.brownDark};
+        color:white;
+        width:2rem;
+        height:2rem;
+        right:-1.2rem;
+        bottom:1.5rem;
+        transition:opacity ${TRANSITION.ease};
+    }
 `
 export const CartIcon = Styled.img`
     pointer-events:none;

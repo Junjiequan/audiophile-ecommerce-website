@@ -1,6 +1,6 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { toggleModal } from '../../actions'
 import{
     HeaderContainer,
@@ -16,6 +16,7 @@ import Logo from '../../assets/shared/desktop/logo.svg'
 import CartImg from '../../assets/shared/desktop/icon-cart.svg'
 
 const Header = () => {
+    const itemAmount = useSelector(state=> state.products.cartItems.length)
     const dispatch = useDispatch();
 
     const location = useLocation();
@@ -33,7 +34,7 @@ const Header = () => {
                     <HeaderNavLink to="/speakers" exact={true} data-active="active" aria-label="link to speakers page">speakers</HeaderNavLink>
                     <HeaderNavLink to="/earphones" exact={true} data-active="active" aria-label="link to earphones page">earphones</HeaderNavLink>
                 </HeaderNav>
-                <CartWrapper onClick={()=>dispatch(toggleModal())}>
+                <CartWrapper data-amount={itemAmount} onClick={()=>dispatch(toggleModal())}>
                     <CartIcon src={CartImg} alt="cart icon image"/>
                 </CartWrapper>
             </HeaderWrapper>

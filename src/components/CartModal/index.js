@@ -58,6 +58,8 @@ const Cart = () => {
         )
     }
     const totalPrice = products.reduce((sum,current)=> sum + current.price * current.qty,0);
+
+    
     return (
         <CartModalContainer data-display={isModalToggle} data-container >
             <CartModalWrapper data-container>
