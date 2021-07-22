@@ -1,6 +1,7 @@
 export const COLORS={
     brownDark:`rgba(216, 125, 74, 1.0)`,
     brownLight:`rgba(251,175,133,1.0)`,
+    grayMid:`rgba(207, 207, 207,1.0)`,
     grayDark:`rgba(241,241,241,1.0)`,
     grayLight:`rgba(250,250,250,1.0)`,
     white:`rgba(255,255,255,1.0)`,

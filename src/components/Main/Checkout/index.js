@@ -1,11 +1,11 @@
 import React from 'react'
 import GoBackBtn from '../../GoBackBtn'
-import Form from './Form'
+import Inputs from './Inputs'
 import Summary from './Summary'
 import {
     CheckoutContainer,
     CheckoutWrapper,
-    CheckoutContent
+    CheckoutForm,
 } from './CheckoutElements'
 
 
@@ -14,10 +14,10 @@ const Checkout = () => {
         <CheckoutContainer>
             <CheckoutWrapper>
                 <GoBackBtn />
-                <CheckoutContent>
-                    <Form />
+                <CheckoutForm>
+                    <Inputs />
                     <Summary />
-                </CheckoutContent>
+                </CheckoutForm>
             </CheckoutWrapper>
         </CheckoutContainer>
 

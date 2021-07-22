@@ -63,6 +63,14 @@ const GlobalStyle = createGlobalStyle`
         max-width: 100%;
         display: block;
     }
+    /* Reset chrome input autofil background change */
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus, 
+    input:-webkit-autofill:active{
+        box-shadow: 0 0 0 30px white inset !important;
+        -webkit-box-shadow: 0 0 0 30px white inset !important;
+        }
     /* Inherit fonts for inputs and buttons */
     input,
     button,
