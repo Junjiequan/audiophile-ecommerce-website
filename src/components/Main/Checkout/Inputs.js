@@ -107,7 +107,7 @@ const Inputs = () => {
             <RadioGroupWrapper>
                 <FormSpan >Payment method</FormSpan>
                 <RadioGroup>
-                    <RadioLabel htmlfor="e-money" data-checked={payment === 'e-money' ? true : false}>
+                    <RadioLabel htmlfor="e-money" data-checked={payment === 'e-money'}>
                         <Radio 
                             id="e-money" 
                             checked={payment === 'e-money'} 
@@ -118,7 +118,7 @@ const Inputs = () => {
                         />
                         <RadioSpan>e-Money</RadioSpan>
                     </RadioLabel>
-                    <RadioLabel htmlfor="cash" data-checked={payment === 'cash' ? true : false}>
+                    <RadioLabel htmlfor="cash" data-checked={payment === 'cash'}>
                         <Radio 
                             id="cash" 
                             checked={payment === 'cash'} 

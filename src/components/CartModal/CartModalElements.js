@@ -128,17 +128,18 @@ export const ItemIncrement = Styled.button`
         outline-offset:-5px;
     }
 `
-export const Total = Styled.div`
+export const Total = Styled.p`
     display:flex;
     justify-content:space-between;
     width:100%;
     margin-bottom:2.4rem;
 `
-export const TotalP = Styled.p`
+export const TotalDesc = Styled.span`
     text-transform:uppercase;
     opacity:.5;
+    user-select:none;
 `
-export const TotalCost = Styled.div`
+export const TotalCost = Styled.span`
     font-weight:700;
     font-size:1.8rem;
 `

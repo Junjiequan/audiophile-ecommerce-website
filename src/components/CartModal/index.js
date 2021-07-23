@@ -17,7 +17,7 @@ import {
     ItemDecrement,
     ItemIncrement,
     Total,
-    TotalP,
+    TotalDesc,
     TotalCost,
     CheckOutBtn
 } from './CartModalElements'
@@ -25,11 +25,10 @@ import {
 
 const Cart = () => {
     const isModalToggle = useSelector(state=>state.modalToggle);
-    // const counter = useSelector(state=>state.counter);
     const products = useSelector(state=>state.products.cartItems);
     const dispatch = useDispatch();
 
-    //click modal outer to close
+    //click modal outer || click checkout button to close modal
     useEffect(()=>{
         document.addEventListener('click',e=>{
             const isOverlay = e.target.getAttribute('data-container') === 'true'
@@ -80,7 +79,7 @@ const Cart = () => {
                     </ItemsWrapper>
 
                     <Total>
-                        <TotalP>Total</TotalP>
+                        <TotalDesc>Total</TotalDesc>
                         <TotalCost>$ {totalPrice.toLocaleString()}</TotalCost>
                     </Total>
                     {
@@ -94,4 +93,6 @@ const Cart = () => {
     )
 }
 
-export default Cart
+//React.memo is just used for try out purpose
+
+export default React.memo(Cart)

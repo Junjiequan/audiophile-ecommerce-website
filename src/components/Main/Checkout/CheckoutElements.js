@@ -18,10 +18,12 @@ export const CheckoutForm = Styled.div`
     display:flex;
     justify-content:space-between;
     flex-wrap:wrap;
+    gap:3rem;
 `
 
-//Inputs components styling
-
+////////////////////////////////////////////
+        //Inputs component section
+////////////////////////////////////////////
 
 export const Form = Styled.form`
     display:flex;
@@ -141,6 +143,7 @@ export const Radio = Styled.input.attrs({type:'radio'})`
     height:20px;
     position:relative;
     opacity:0.4;
+    cursor:pointer;
     &:checked{
         opacity:1;
     }
@@ -157,6 +160,7 @@ export const Radio = Styled.input.attrs({type:'radio'})`
         background:white;
         border-radius: 100%;
         left:0;right:0;top: 0; bottom:0;
+
     }
     &:checked:after{
         display:flex;
@@ -176,22 +180,41 @@ export const RadioSpan = Styled.span`
     user-select:none;
 `
 
+////////////////////////////////////////////
+        //Summary component section
+////////////////////////////////////////////
 
-
-
-
-
+export const SummaryWrapper = Styled.div`
+    display:flex;
+    flex-direction:column;
+    max-width:73rem;
+    flex: 1 1 35rem;
+    background:${COLORS.white};
+    border-radius:8px;
+    padding:3.2rem;
+    height:fit-content;
+`
+export const SummaryTitle = Styled.h2``
+export const ItemsWrapper = Styled.ul``
+export const Item = Styled.li``
+export const ItemImg = Styled.img``
+export const ItemInfo = Styled.p``
+export const ItemPrice = Styled.span``
+export const ItemAmount = Styled.span``
+export const PriceWrapper = Styled.ul``
+export const Price = Styled.li``
+export const PriceDesc = Styled.span``
+export const PriceCost = Styled.span``
 
 
 export const ContinueBtn = Styled.button`
     display:flex;
-    border:1px solid red;
-    /* width:100%; */
-    width:28.4rem;
+    max-width:28.4rem;
+    width:100%;
     height:4.8rem;
     justify-content:center;
     align-items:center;
-    background-color:${COLORS.brownLight};
+    background-color:${props=>props.form? `${COLORS.brownLight}`: `${COLORS.black}`};
     color:${COLORS.white};
     text-transform:uppercase;
     letter-spacing:.1rem;
@@ -211,7 +234,7 @@ export const ContinueBtn = Styled.button`
         align-items:center;
         white-space: nowrap;
         background-size:100% 100%;
-        background-color:${COLORS.brownDark};
+        background-color:${props=>props.form? `${COLORS.brownDark}`: `${COLORS.black}`};
         transition:height ${TRANSITION.ease};
     }
     &:after{
