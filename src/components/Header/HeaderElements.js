@@ -91,7 +91,7 @@ export const MobNavWrapper = Styled.div`
     background:hsla(0,0%,0%,0.5);
     transform:${props=>props['data-open'] ? 'translateX(0%)' : 'translateX(-120%)'};
     transition:all ${TRANSITION.ease};
-    overflow-Y:hidden;
+    overflow-y:auto;
 `
 export const MobNav = Styled.div`
     display:flex;
