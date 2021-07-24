@@ -7,6 +7,7 @@ export const ProductNavContainer = Styled.section`
     display:block;
     margin:${SPACE.productNav};
     padding:${SPACE.container};
+    width:100%;
     @media screen and ${DEVICE.md}{
         margin:${SPACE.productNavMD}
     }
@@ -55,6 +56,7 @@ export const ProductNavItem = Styled(LinkR)`
         min-height:25rem;
         top:-9rem;
         transition:all ${TRANSITION.ease};
+
     }
     &:hover:before{
         animation: ${ANIMATION.jelloHorizontal} 0.4s linear both;
@@ -74,26 +76,25 @@ export const ProductNavItem = Styled(LinkR)`
     }
     @media screen and ${DEVICE.sm}{
         padding-bottom:2rem;
-        min-height:16.5rem;
+        min-height:14rem;
         &:nth-child(2){
-            margin:8rem 0;
+            margin:6rem 0;
         }
         &::before{
-            background-size:52%;
+            background-size:42%;
             top:-10rem;
         }
         &:nth-child(3):before{
             top:-9.5rem;
-            background-size:60%;
+            background-size:50%;
         }
     }
 `
 export const ProductTitle = Styled.span`
     pointer-events:none;
-    margin-bottom:1.5rem;
+    margin-bottom:.5rem;
     ${FONT.menutitle};
     @media screen and ${DEVICE.sm}{
-        margin-bottom:1rem;
         font-size:1.5rem;
     }
 `

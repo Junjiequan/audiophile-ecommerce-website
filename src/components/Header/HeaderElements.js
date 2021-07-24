@@ -1,6 +1,6 @@
 import Styled from 'styled-components'
 import { Link as LinkR, NavLink } from 'react-router-dom'
-import { COLORS, SPACE, WIDTH, TRANSITION, DEVICE } from '../../Constants'
+import { COLORS, SPACE, WIDTH, HEIGHT, TRANSITION, DEVICE } from '../../Constants'
 
 const headerBorderBottom = `
     &:after{
@@ -19,7 +19,7 @@ export const HeaderContainer = Styled.header`
     position:sticky;
     top:0;
     width:100%;
-    height:100%;
+    height:10rem;
     background:${prop=> prop.bgColor? 'rgb(25,25,25)': `${COLORS.black}`};
     display:flex;
     justify-content:center;
@@ -27,11 +27,11 @@ export const HeaderContainer = Styled.header`
     z-index:9999;
 `
 export const HeaderWrapper = Styled.div`
-    margin:${SPACE.wrapper};
     max-width:${WIDTH.desktop};
     width:100%;
     display:flex;
     justify-content:space-between;
+    align-items:center;
     position:relative;
     ${prop=> prop.borderBot ? headerBorderBottom : null};
 `
@@ -77,6 +77,31 @@ export const HeaderNavLink = Styled(NavLink)`
     &.${props=> props["data-active"]}{
         background-position: 0%;
     }
+`
+export const MobNavWrapper = Styled.div`
+    z-index:99;
+    position:absolute;
+    top:10rem; // nav height;
+    width:100vw;
+    display:flex;
+    justify-content:center;
+    height:100vh;
+    opacity:${props=>props['data-open'] ? '1' : '0'};
+    margin:-3.2rem -2.4rem -3.6rem;
+    background:hsla(0,0%,0%,0.5);
+    transform:${props=>props['data-open'] ? 'translateX(0%)' : 'translateX(-120%)'};
+    transition:all ${TRANSITION.ease};
+    overflow-Y:hidden;
+`
+export const MobNav = Styled.div`
+    display:flex;
+    width:100%;
+    background:${COLORS.white};
+    transform:${props=>props['data-open'] ? 'translateY(0%)' : 'translateY(-120%)'};
+    transition:all ${TRANSITION.ease};
+    transition-delay:.2s;
+    height:fit-content;
+    justify-content:center;
 `
 export const CartWrapper = Styled.button`
     display:flex;

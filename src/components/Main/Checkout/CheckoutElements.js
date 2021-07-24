@@ -1,7 +1,7 @@
 import Styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
 import { WIDTH,SPACE,COLORS,TRANSITION,DEVICE } from '../../../Constants';
-
+import { ANIMATION } from '../../../Animation'
 
 export const CheckoutContainer = Styled.main`
     padding:${SPACE.container};
@@ -360,6 +360,8 @@ export const ModalWrapper = Styled.div`
     background:${COLORS.white};
     border-radius:8px;
     height:fit-content;
+    transition:opacity ${TRANSITION.ease};
+    animation:${ANIMATION.fadeIn} 1s ease-in-out;
     @media screen and ${DEVICE.sm}{
         max-width:100%;
         height:100vh;

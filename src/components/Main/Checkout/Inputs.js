@@ -29,6 +29,8 @@ const phoneRegExp = /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -
 const Inputs = () => {
     const [payment, setPayment] = useState('e-money');
     const isEMoney = payment === 'e-money';
+    const errorBorder = {border: '2px solid #CD2C2C'}
+    const errorColor = {color: '#CD2C2C'}
     const dispatch = useDispatch();
 
     // schema checks input errors
@@ -44,9 +46,9 @@ const Inputs = () => {
         address:yup.string()
             .required('provide address'),
         zipCode:yup.number()
-            .min(4,'minimum 4 numbers')
             .typeError("Must be a number")
-            .required('provide zip code'),
+            .required('provide zip code')
+            .test('len','Must be less than 11 characters',val=> val ? val.toString().length < 11 : null),
         city:yup.string()
             .required('provide city'),
         country:yup.string()
@@ -76,11 +78,9 @@ const Inputs = () => {
 
     const onSubmit = (data) =>{
         dispatch(toggleSuccess());
-        setTimeout(()=>alert(JSON.stringify(data)),1200);
+        setTimeout(()=>alert(`just to make sure everything is collected correctly \n${JSON.stringify(data)}`),1200);
     }
 
-    const errorBorder = {border: '2px solid #CD2C2C'}
-    const errorColor = {color: '#CD2C2C'}
 
     return (
         <Form id='checkout-form' onSubmit={handleSubmit(onSubmit)}>
@@ -162,7 +162,7 @@ const Inputs = () => {
                 payment === 'e-money'
                 
                 ?
-                <FormGroup data-aos="fade" data-aos-duration="900" data-aos-once="true" >
+                <FormGroup data-aos="fade" data-aos-duration="500" data-aos-once="true" >
                     <FormLabel>
                         <FormSpan style={errors.eMoneyNum ? errorColor: {}}>e-Money Number</FormSpan>
                         <FormInput {...register("eMoneyNum")} style={errors.eMoneyNum ? errorBorder: {}} placeholder='238521993'/>
@@ -176,7 +176,7 @@ const Inputs = () => {
                 </FormGroup>
 
                 :
-                <CashInfo data-aos="fade" data-aos-duration="900" data-aos-once="true" >
+                <CashInfo data-aos="fade" data-aos-duration="500" data-aos-once="true" >
                     <GiTakeMyMoney size={48} style={{minWidth:'48px'}}color={'#D87D4A'}/>
                     <CashP>
                         The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives at your residence. 

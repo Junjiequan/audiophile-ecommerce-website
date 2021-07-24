@@ -35,7 +35,7 @@ const SuccessModal = (props) => {
 
     const displayItems = (item,index)=>{
         return(
-            <ModalItem>
+            <ModalItem key={index}>
                 <ModalItemImg width="50" height="50" src={require(`../../../assets/${item.cartImg}`).default} alt={item.cartImg}/>
                 <ModalItemInfo>
                     {item.short}
@@ -48,8 +48,8 @@ const SuccessModal = (props) => {
         )
     }
     return (
-        <ModalContainer data-display={success}>
-            <ModalWrapper>
+        <ModalContainer data-display={success} >
+            <ModalWrapper >
                 <ModalIcon> 	&#10003;</ModalIcon>
                 <ModalH3>THANK YOU <br/>FOR YOUR ORDER</ModalH3>
                 <ModalP>You will receive an email confirmation shortly.</ModalP>

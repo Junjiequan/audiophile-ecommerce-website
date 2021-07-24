@@ -21,7 +21,7 @@ export const SPACE={
     FootDeskContainerPaddingSM:`5.2rem 2.4rem 3.8rem`,
     container:`0 2.4rem`,
     productNav:`20rem 0 16.8rem`,
-    productNavMD:`15.3rem 0 9.6rem`,
+    productNavMD:`13.3rem 0 9.6rem`,
     productNavSM:`8.9rem 0 12rem`,
     banner:`20rem 0`,
     bannerSM:`20rem 0 10rem`,
