@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Divide  as Hamburger } from 'hamburger-react'
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { toggleModal } from '../../actions';
 import useWindowSize from '../../hooks/useWindowSize';
 import ProductNav from '../ProductNav'
@@ -28,6 +29,7 @@ const Header = () => {
     const isMobile = width.width < 769;
     const location = useLocation();
     let isHomePage = location.pathname === '/';
+    isOpen ? disableBodyScroll(document) : enableBodyScroll(document)
 
 
     return (
