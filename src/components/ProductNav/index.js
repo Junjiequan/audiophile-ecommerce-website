@@ -18,7 +18,7 @@ const ProductNav = () => {
                 <ProductNavItem 
                     to="/headphones"
                     data-aos-once="true"
-                    // data-aos="flip-left"
+                    data-aos="flip-left"
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="700"
                     data-product-image={headphone}>
@@ -28,7 +28,7 @@ const ProductNav = () => {
                 <ProductNavItem 
                     to="/speakers"
                     data-aos-once="true"
-                    // data-aos="flip-left"
+                    data-aos="flip-left"
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="700"
                     data-aos-delay="100"
@@ -39,7 +39,7 @@ const ProductNav = () => {
                 <ProductNavItem 
                     to="/earphones"
                     data-aos-once="true"
-                    // data-aos="flip-left"
+                    data-aos="flip-left"
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="700"
                     data-aos-delay="200"

@@ -49,7 +49,11 @@ const HomeMain = () => {
                 </MainSpeakerSecWrapper>
 
                 <MainEarphoneWrapper aria-label="YX1 earphone product image">
-                    <MainEarphoneImg data-aos="flip-left" data-aos-duration="800" data-aos-delay="100" src={earphoneYX1Img} alt="earphone YX1 product image"/>
+                    <MainEarphoneImg 
+                    data-aos="flip-left" 
+                    data-aos-duration="800" 
+                    data-aos-delay="100" 
+                    src={earphoneYX1Img} alt="earphone YX1 product image"/>
                     <MainEarphoneInfo>
                         <MainH3>YX1 EARPHONES</MainH3>
                         <GlobalBtnWhite data-text="see product" aria-label="link to YX1 earphone product detail page" to="/product_detail/yx1"/>
