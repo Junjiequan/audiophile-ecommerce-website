@@ -1,9 +1,9 @@
 import Styled from 'styled-components';
-import { WIDTH,SPACE,COLORS,TRANSITION,DEVICE,FONT } from '../../../Constants';
+import { WIDTH,HEIGHT,SPACE,COLORS,TRANSITION,DEVICE,FONT } from '../../../Constants';
 
 
 export const ProductMainContainer = Styled.section`
-    padding:${SPACE.container};
+    padding:${HEIGHT.navHeight} 2.4rem 0;
     display:flex;
     justify-content:center;
 `

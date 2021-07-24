@@ -1,6 +1,6 @@
 import Styled from 'styled-components'
 import { Link as LinkR, NavLink } from 'react-router-dom'
-import { COLORS, SPACE, WIDTH, TRANSITION, DEVICE } from '../../Constants'
+import { COLORS, SPACE, WIDTH, HEIGHT, TRANSITION, DEVICE } from '../../Constants'
 
 const headerBorderBottom = `
     &:after{
@@ -16,15 +16,16 @@ const headerBorderBottom = `
 `
 
 export const HeaderContainer = Styled.header`
-    position:sticky;
+    position:fixed;
     top:0;
     width:100%;
-    height:10rem;
+    height:${props=>props['data-scrolled'] ? `${HEIGHT.navScrolledHeight}` :`${HEIGHT.navHeight}`};
     background:${prop=> prop.bgColor? 'rgb(25,25,25)': `${COLORS.black}`};
     display:flex;
     justify-content:center;
     padding:${SPACE.navDeskContainerPadding};
     z-index:9999;
+    transition: all .3s linear;
 `
 export const HeaderWrapper = Styled.div`
     max-width:${WIDTH.desktop};
@@ -81,7 +82,7 @@ export const HeaderNavLink = Styled(NavLink)`
 export const MobNavWrapper = Styled.div`
     z-index:99;
     position:absolute;
-    top:10rem; // nav height;
+    top:${props=>props['data-scrolled'] ? `${HEIGHT.navScrolledHeight}` :`${HEIGHT.navHeight}`}; 
     width:100vw;
     display:flex;
     justify-content:center;

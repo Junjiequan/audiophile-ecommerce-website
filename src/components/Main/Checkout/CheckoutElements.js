@@ -1,10 +1,10 @@
 import Styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
-import { WIDTH,SPACE,COLORS,TRANSITION,DEVICE } from '../../../Constants';
+import { WIDTH,HEIGHT,COLORS,TRANSITION,DEVICE } from '../../../Constants';
 import { ANIMATION } from '../../../Animation'
 
 export const CheckoutContainer = Styled.main`
-    padding:${SPACE.container};
+    padding:${HEIGHT.navHeight} 2.4rem 0;
     display:flex;
     justify-content:center;
     padding-bottom:14.1rem;

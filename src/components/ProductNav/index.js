@@ -20,6 +20,7 @@ const ProductNav = () => {
                     data-aos="flip-left"
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="700"
+                    data-aos-offset="0"
                     data-product-image={headphone}>
                     <ProductTitle>headphones</ProductTitle>
                     <GlobalArrowBtn data-text="shop" tabIndex="-1" aria-label="link to headphones product page"/>
@@ -30,6 +31,7 @@ const ProductNav = () => {
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="700"
                     data-aos-delay="100"
+                    data-aos-offset="0"
                     data-product-image={speaker}>
                     <ProductTitle>speakers</ProductTitle>
                     <GlobalArrowBtn data-text="shop" tabIndex="-1" aria-label="link to speakers product page"/>

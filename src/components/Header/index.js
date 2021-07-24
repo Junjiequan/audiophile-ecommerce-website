@@ -5,6 +5,7 @@ import { Divide  as Hamburger } from 'hamburger-react'
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { toggleModal } from '../../actions';
 import useWindowSize from '../../hooks/useWindowSize';
+import useWindowScroll from '../../hooks/useWindowScroll';
 import ProductNav from '../ProductNav'
 import{
     HeaderContainer,
@@ -25,15 +26,16 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const itemAmount = useSelector(state=> state.products.cartItems.length)
     const dispatch = useDispatch();
-    const width = useWindowSize();
-    const isMobile = width.width < 769;
+    const SIZE = useWindowSize();
+    const SCROLL = useWindowScroll();
+    const isMobile = SIZE.width < 769;
+    const isScrolled = SCROLL.height >= 390;
     const location = useLocation();
     let isHomePage = location.pathname === '/';
     isOpen ? disableBodyScroll(document) : enableBodyScroll(document)
 
-
     return (
-        <HeaderContainer bgColor={isHomePage} >
+        <HeaderContainer bgColor={isHomePage} data-scrolled={isScrolled}>
             <HeaderWrapper borderBot={true}>
                 {
                     isMobile && 
@@ -50,8 +52,8 @@ const Header = () => {
                 </HeaderNav>
                 {
                     isMobile && 
-                <MobNavWrapper data-open={isOpen} onClick={()=> setIsOpen(!isOpen)}>
-                    <MobNav data-open={isOpen}>
+                <MobNavWrapper data-open={isOpen} data-scrolled={isScrolled} onClick={()=> setIsOpen(!isOpen)}>
+                    <MobNav data-open={isOpen} >
                         <ProductNav />
                     </MobNav>
                 </MobNavWrapper>

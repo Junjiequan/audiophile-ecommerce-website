@@ -3,16 +3,16 @@ import { COLORS,FONT,TRANSITION,WIDTH,SPACE,DEVICE } from '../../Constants'
 import { ANIMATION } from '../../Animation'
 import { Link as LinkR } from 'react-router-dom'
 
-export const ProductNavContainer = Styled.section`
+export const ProductNavContainer = Styled.div`
     display:block;
     margin:${SPACE.productNav};
-    padding:${SPACE.container};
+    padding:0 2.4rem;
     width:100%;
     @media screen and ${DEVICE.md}{
         margin:${SPACE.productNavMD}
     }
     @media screen and ${DEVICE.sm}{
-        margin:${SPACE.productNavSM}
+        margin:${SPACE.productNavSM};
     }
 `
 export const ProductNavWrapper = Styled.div`

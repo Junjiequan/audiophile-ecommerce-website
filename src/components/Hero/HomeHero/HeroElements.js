@@ -10,7 +10,6 @@ export const HeroContainer = Styled.section`
     display:flex;
     justify-content:center;
     padding:${SPACE.container};
-    margin-top:-9.6rem;
     height:72.8rem;
     background:${COLORS.blackStupid};
     z-index:1;

@@ -1,11 +1,11 @@
 import Styled from 'styled-components'
-import { SPACE,WIDTH,COLORS,DEVICE } from '../../../Constants'
+import { HEIGHT,WIDTH,COLORS,DEVICE } from '../../../Constants'
 
 
 export const CategoryHeroContainer = Styled.section`
     display:flex;
     justify-content:center;
-    padding:${SPACE.container};
+    padding:${HEIGHT.navHeight} 2.4rem 0;
     background:${COLORS.black};
     transform:translateY(-23.9rem);
     @media screen and ${DEVICE.sm}{
