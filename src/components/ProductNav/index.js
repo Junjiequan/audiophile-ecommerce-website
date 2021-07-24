@@ -17,7 +17,6 @@ const ProductNav = () => {
             <ProductNavWrapper >
                 <ProductNavItem 
                     to="/headphones"
-                    data-aos-once="true"
                     data-aos="flip-left"
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="700"
@@ -27,7 +26,6 @@ const ProductNav = () => {
                 </ProductNavItem>
                 <ProductNavItem 
                     to="/speakers"
-                    data-aos-once="true"
                     data-aos="flip-left"
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="700"
@@ -38,11 +36,11 @@ const ProductNav = () => {
                 </ProductNavItem>
                 <ProductNavItem 
                     to="/earphones"
-                    data-aos-once="true"
                     data-aos="flip-left"
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="700"
                     data-aos-delay="200"
+                    data-aos-offset="0"
                     data-product-image={earphone}>
                     <ProductTitle>earphones</ProductTitle>
                     <GlobalArrowBtn data-text="shop" tabIndex="-1" aria-label="link to earphones product page"/>

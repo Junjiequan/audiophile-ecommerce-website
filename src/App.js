@@ -16,7 +16,9 @@ import "aos/dist/aos.css";
 
 
 const App = () => {
-  Aos.init();
+  Aos.init({
+    once:true
+  });
 
   return (
       <>

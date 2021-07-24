@@ -1,6 +1,6 @@
 import Styled from 'styled-components'
 import { Link as LinkR, NavLink } from 'react-router-dom'
-import { COLORS, SPACE, WIDTH, HEIGHT, TRANSITION, DEVICE } from '../../Constants'
+import { COLORS, SPACE, WIDTH, TRANSITION, DEVICE } from '../../Constants'
 
 const headerBorderBottom = `
     &:after{
@@ -102,6 +102,8 @@ export const MobNav = Styled.div`
     transition-delay:.2s;
     height:fit-content;
     justify-content:center;
+    @media screen and ${DEVICE.height}{
+    }
 `
 export const CartWrapper = Styled.button`
     display:flex;
