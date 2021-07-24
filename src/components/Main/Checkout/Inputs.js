@@ -1,5 +1,7 @@
-import React,{useState} from 'react'
+import React,{ useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { useForm } from "react-hook-form";
+import { toggleSuccess } from  '../../../actions'
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup  from 'yup';
 import {
@@ -16,41 +18,66 @@ import {
     RadioLabel,
     Radio,
     RadioSpan,
+    CashInfo,
+    CashP
 } from './CheckoutElements'
+import {GiTakeMyMoney} from 'react-icons/gi'
+
 
 const phoneRegExp = /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/
 
-const schema = yup.object().shape({
-    name: yup.string()
-        .required('anonymous?'),
-    email: yup.string()
-        .email('example@example.com')
-        .required('provide email address'),
-    phoneNumber:yup.string()
-        .required('provide phone number')
-        .matches(phoneRegExp, "+45 1234-5678"),
-    address:yup.string()
-        .required('provide address'),
-    zipCode:yup.number()
-        .min(4,'minimum 4 numbers')
-        .typeError("Must be a number")
-        .required('provide zip code'),
-    city:yup.string()
-        .required('provide city'),
-    country:yup.string()
-        .required('provide country'),
-  });
-
-
-
 const Inputs = () => {
     const [payment, setPayment] = useState('e-money');
+    const isEMoney = payment === 'e-money';
+    const dispatch = useDispatch();
 
+    // schema checks input errors
+    const schema = yup.object().shape({
+        name: yup.string()
+            .required('anonymous?'),
+        email: yup.string()
+            .email('example@example.com')
+            .required('provide email address'),
+        phoneNumber:yup.string()
+            .required('provide phone number')
+            .matches(phoneRegExp, "+45 1234-5678"),
+        address:yup.string()
+            .required('provide address'),
+        zipCode:yup.number()
+            .min(4,'minimum 4 numbers')
+            .typeError("Must be a number")
+            .required('provide zip code'),
+        city:yup.string()
+            .required('provide city'),
+        country:yup.string()
+            .required('provide country'),
+        requirePIN:yup.boolean(),
+        eMoneyNum:yup.string()
+            .when('requirePIN',()=>{
+                if(isEMoney){
+                    return yup.number()
+                    .typeError("Must be a number")
+                    .test('len','Must be 9 characters',val=> val ? val.toString().length === 9 : null)
+                }
+            }),
+        eMoneyPin:yup.string()
+            .when('requirePIN',()=>{
+                if(isEMoney){
+                    return yup.number()
+                    .typeError("Must be a number")
+                    .test('len','Must be 4 characters',val=> val ? val.toString().length === 4 : null)
+                }
+            }),
+      });
+      
     const { register, handleSubmit, formState:{ errors }} = useForm({
         resolver: yupResolver(schema)
       });
 
-    const onSubmit = (data) => alert(JSON.stringify(data));
+    const onSubmit = (data) =>{
+        dispatch(toggleSuccess());
+        setTimeout(()=>alert(JSON.stringify(data)),1200);
+    }
 
     const errorBorder = {border: '2px solid #CD2C2C'}
     const errorColor = {color: '#CD2C2C'}
@@ -131,6 +158,32 @@ const Inputs = () => {
                     </RadioLabel>
                 </RadioGroup>
             </RadioGroupWrapper>
+            {
+                payment === 'e-money'
+                
+                ?
+                <FormGroup data-aos="fade" data-aos-duration="900" data-aos-once="true" >
+                    <FormLabel>
+                        <FormSpan style={errors.eMoneyNum ? errorColor: {}}>e-Money Number</FormSpan>
+                        <FormInput {...register("eMoneyNum")} style={errors.eMoneyNum ? errorBorder: {}} placeholder='238521993'/>
+                        <Error>{errors.eMoneyNum?.message}</Error>
+                    </FormLabel>
+                    <FormLabel>
+                        <FormSpan style={errors.eMoneyPin ? errorColor: {}}>e-Money Pin</FormSpan>
+                        <FormInput {...register("eMoneyPin")} style={errors.eMoneyPin ? errorBorder: {}} placeholder='6891'/>
+                        <Error>{errors.eMoneyPin?.message}</Error>
+                    </FormLabel>
+                </FormGroup>
+
+                :
+                <CashInfo data-aos="fade" data-aos-duration="900" data-aos-once="true" >
+                    <GiTakeMyMoney size={48} style={{minWidth:'48px'}}color={'#D87D4A'}/>
+                    <CashP>
+                        The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives at your residence. 
+                        Just make sure your address is correct so that your order will not be cancelled.
+                    </CashP>
+                </CashInfo>
+            }
         </Form>
     )
 }

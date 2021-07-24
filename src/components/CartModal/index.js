@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react' 
 import { useSelector, useDispatch } from 'react-redux'
 import { toggleModal,addProduct,deleteProduct,resProduct } from '../../actions'
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import {
     CartModalContainer,
     CartModalWrapper,
@@ -27,7 +28,8 @@ const Cart = () => {
     const isModalToggle = useSelector(state=>state.modalToggle);
     const products = useSelector(state=>state.products.cartItems);
     const dispatch = useDispatch();
-
+    isModalToggle ? disableBodyScroll(document) : enableBodyScroll(document)
+    
     //click modal outer || click checkout button to close modal
     useEffect(()=>{
         document.addEventListener('click',e=>{

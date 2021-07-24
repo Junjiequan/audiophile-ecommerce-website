@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { COLORS } from './Constants'
 
+
 const GlobalStyle = createGlobalStyle`
     /* Set default font size */
     html{

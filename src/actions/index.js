@@ -16,6 +16,11 @@ export const toggleModal = ()=>{
         type:'TOGGLE'
     }
 }
+export const toggleSuccess = ()=>{
+    return {
+        type:'SUCCESS'
+    }
+}
 
 //product
 export const resProduct = ()=>{
