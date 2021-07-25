@@ -51,7 +51,7 @@ const Summary = (props) => {
     if(products.length < 1)
         return(
             <SummaryWrapper style={{alignItems:'center'}}>
-                <iframe title="random gif" src="https://giphy.com/embed/nKERd2uhn8hhe" width="240" height="180" frameBorder="0" style={{pointerEvents:'none'}} />
+                <iframe title="random gif" src="https://giphy.com/embed/nKERd2uhn8hhe" width="240" height="180" style={{pointerEvents:'none',border:'0'}} />
                 <ContinueBtn data-text="back to purchase" onClick={()=>history.goBack()} aria-label="back to previous page" />
             </SummaryWrapper>
         )

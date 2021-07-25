@@ -7,12 +7,12 @@ import ProductNav from '../components/ProductNav'
 
 const Home = () => {
     return (
-        <>
+        <main>
         <Hero />
         <ProductNav/>
         <HomeMain />
         <Banner />
-        </>
+        </main>
     )
 }
 

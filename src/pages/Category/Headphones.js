@@ -8,12 +8,12 @@ import {HEADPHONES} from '../../data/CategoryData'
 
 const Headphones = () => {
     return (
-        <>
+        <main>
         <CategoryHero pageTitle="headphones"/>
         <CategoryMain data={HEADPHONES} />
         <ProductNav />
         <Banner />
-        </>
+        </main>
     )
 }
 

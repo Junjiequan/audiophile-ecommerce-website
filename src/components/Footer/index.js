@@ -45,9 +45,9 @@ const Footer = () => {
                 <FooterEnder>
                     <CopyRight>Copyright 2021. All Rights Reserved</CopyRight>
                     <FooterIcons>
-                        <FooterIcon href="#" rel="noopener noreferrer nofollow"><FaFacebookSquare /></FooterIcon>
-                        <FooterIcon href="#" rel="noopener noreferrer nofollow"><FaInstagram /></FooterIcon>
-                        <FooterIcon href="#" rel="noopener noreferrer nofollow"><FaTwitter /></FooterIcon>
+                        <FooterIcon href="#" rel="noopener noreferrer nofollow" aria-label="direct to facebook page"><FaFacebookSquare /></FooterIcon>
+                        <FooterIcon href="#" rel="noopener noreferrer nofollow" aria-label="direct to instagram page"><FaInstagram /></FooterIcon>
+                        <FooterIcon href="#" rel="noopener noreferrer nofollow" aria-label="direct to twitter page"><FaTwitter /></FooterIcon>
                     </FooterIcons>
                 </FooterEnder>
             </FooterWrapper>

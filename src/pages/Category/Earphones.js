@@ -8,12 +8,12 @@ import { EARPHONES } from '../../data/CategoryData'
 
 const Earphones = () => {
     return (
-        <>
+        <main>
         <CategoryHero pageTitle="Earphones"/>
         <CategoryMain data={EARPHONES} />
         <ProductNav />
         <Banner />
-        </>
+        </main>
     )
 }
 

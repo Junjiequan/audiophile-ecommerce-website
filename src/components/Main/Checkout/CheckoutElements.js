@@ -3,7 +3,7 @@ import { Link as LinkR } from 'react-router-dom';
 import { WIDTH,HEIGHT,COLORS,TRANSITION,DEVICE } from '../../../Constants';
 import { ANIMATION } from '../../../Animation'
 
-export const CheckoutContainer = Styled.main`
+export const CheckoutContainer = Styled.div`
     padding:${HEIGHT.navHeight} 2.4rem 0;
     display:flex;
     justify-content:center;

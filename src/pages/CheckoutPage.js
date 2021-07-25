@@ -3,7 +3,9 @@ import Checkout from '../components/Main/Checkout'
 
 const CheckoutPage = () => {
     return (
-        <Checkout />
+        <main>
+            <Checkout />
+        </main>
     )
 }
 

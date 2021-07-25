@@ -30,7 +30,7 @@ const ProductDetail = () => {
     },[path]);
 
     return (
-        <>
+        <main>
             {
                 isLoading
                 ? <IsLoading />
@@ -38,7 +38,7 @@ const ProductDetail = () => {
             }
             <ProductNav />
             <Banner />
-        </>
+        </main>
     )
 }
 

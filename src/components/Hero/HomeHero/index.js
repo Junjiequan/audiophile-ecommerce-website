@@ -33,7 +33,7 @@ const Hero = () => {
                         to="/product_detail/xx99-mark-ii"
                     />
                 </HeroDesc>
-                <HeroImg aria-label="giant headphone image on background" />
+                <HeroImg  role="img" aria-label="A view of XX99 mark II headphone" />
             </HeroWrapper>
         </HeroContainer>
     )

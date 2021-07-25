@@ -39,7 +39,13 @@ const Banner = () => {
                     data-aos="flip-right" 
                     data-aos-duration="800" 
                     data-aos-delay="100" >
-                    <BannerImg src={ManImgLG}  srcSet={`${ManImgSM} 375w, ${ManImgMD} 768w, ${ManImgLG} 1024w`} alt="A handsome man wearing a headphone" />
+                    <BannerImg 
+                        src={ManImgLG} 
+                        width="540" 
+                        height="588" 
+                        srcSet={`${ManImgSM} 375w, ${ManImgMD} 768w, ${ManImgLG} 1024w`} 
+                        sizes="(max-width:1110px) 100vw, 1100px" 
+                        alt="A handsome man wearing a headphone" />
                 </BannerImgWrapper>
             </BannerWrapper>
         </BannerContainer>

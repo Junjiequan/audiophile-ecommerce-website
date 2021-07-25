@@ -8,12 +8,12 @@ import {SPEAKERS} from '../../data/CategoryData'
 
 const Speakers = () => {
     return (
-        <>
+        <main>
         <CategoryHero pageTitle="speakers"/>
         <CategoryMain data={SPEAKERS} />
         <ProductNav />
         <Banner />
-        </>
+        </main>
     )
 }
 

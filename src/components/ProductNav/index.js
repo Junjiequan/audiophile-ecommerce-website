@@ -21,9 +21,11 @@ const ProductNav = () => {
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="700"
                     data-aos-offset="0"
-                    data-product-image={headphone}>
+                    data-product-image={headphone}
+                    aria-label="link to headphones product page"
+                >
                     <ProductTitle>headphones</ProductTitle>
-                    <GlobalArrowBtn data-text="shop" tabIndex="-1" aria-label="link to headphones product page"/>
+                    <GlobalArrowBtn data-text="shop"/>
                 </ProductNavItem>
                 <ProductNavItem 
                     to="/speakers"
@@ -32,9 +34,11 @@ const ProductNav = () => {
                     data-aos-duration="700"
                     data-aos-delay="100"
                     data-aos-offset="0"
-                    data-product-image={speaker}>
+                    data-product-image={speaker}
+                    aria-label="link to speakers product page"
+                >
                     <ProductTitle>speakers</ProductTitle>
-                    <GlobalArrowBtn data-text="shop" tabIndex="-1" aria-label="link to speakers product page"/>
+                    <GlobalArrowBtn data-text="shop"/>
                 </ProductNavItem>
                 <ProductNavItem 
                     to="/earphones"
@@ -43,9 +47,11 @@ const ProductNav = () => {
                     data-aos-duration="700"
                     data-aos-delay="200"
                     data-aos-offset="0"
-                    data-product-image={earphone}>
+                    data-product-image={earphone}
+                    aria-label="link to earphones product page"
+                >
                     <ProductTitle>earphones</ProductTitle>
-                    <GlobalArrowBtn data-text="shop" tabIndex="-1" aria-label="link to earphones product page"/>
+                    <GlobalArrowBtn data-text="shop"/>
                 </ProductNavItem>
             </ProductNavWrapper>
         </ProductNavContainer>

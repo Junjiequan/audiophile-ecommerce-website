@@ -25,7 +25,7 @@ export const HeaderContainer = Styled.header`
     justify-content:center;
     padding:${SPACE.navDeskContainerPadding};
     z-index:9999;
-    transition: all .3s linear;
+    transition: height .3s linear;
 `
 export const HeaderWrapper = Styled.div`
     max-width:${WIDTH.desktop};

@@ -148,7 +148,7 @@ export const GlobalBtnWhite = Styled(LinkR)`
         transform:translateY(2px);
     }
 `
-export const GlobalArrowBtn = Styled.button`
+export const GlobalArrowBtn = Styled.span`
     pointer-events:none;
     display:flex;
     align-items:center;

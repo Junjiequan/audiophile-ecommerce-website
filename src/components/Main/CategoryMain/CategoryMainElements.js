@@ -1,8 +1,8 @@
 import Styled from 'styled-components';
-import { COLORS,SPACE,WIDTH,HEIGHT,FONT,DEVICE } from '../../../Constants'
+import { COLORS,SPACE,WIDTH,FONT,DEVICE } from '../../../Constants'
 
 
-export const CategoryMainContainer = Styled.main`
+export const CategoryMainContainer = Styled.div`
     display:flex;
     justify-content:center;
     padding:${SPACE.container};

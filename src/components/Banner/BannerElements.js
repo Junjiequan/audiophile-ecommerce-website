@@ -58,8 +58,6 @@ export const BannerImgWrapper = Styled.div`
 `
 export const BannerImg = Styled.img`
     object-fit:cover;
-    width:54rem;
-    height:58.8rem;
     border-radius:8px;
     @media screen and ${DEVICE.md}{
         width:68.9rem;

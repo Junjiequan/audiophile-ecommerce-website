@@ -28,7 +28,8 @@ const HomeMain = () => {
                         data-aos="fade-up" 
                         data-aos-duration="1000" 
                         imageSrc={speakerZX9Img} 
-                        aria-label="ZX9 speaker product image" />
+                        role="img"
+                        aria-label="ZX9 speaker product image background" />
                     <MainSpeakerInfo>
                         <MainSpeakerH1>ZX9 SPEAKER</MainSpeakerH1>
                         <MainSpeakerDesc>
@@ -43,12 +44,12 @@ const HomeMain = () => {
                     data-aos="zoom-in-out" 
                     data-aos-duration="700" 
                     imageSrc={speakerZX7Img}
-                    aria-label="ZX7 speaker product image">
+                    >
                     <MainH3>ZX7 SPEAKER</MainH3>
                     <GlobalBtnWhite data-text="see product" aria-label="link to ZX7 speaker product detail page" to="/product_detail/zx7"/>
                 </MainSpeakerSecWrapper>
 
-                <MainEarphoneWrapper aria-label="YX1 earphone product image">
+                <MainEarphoneWrapper>
                     <MainEarphoneImg 
                     data-aos="flip-left" 
                     data-aos-duration="800" 

@@ -6,7 +6,7 @@ import speakerZX7ImgMD from '../../../assets/home/tablet/image-speaker-zx7.jpg'
 import speakerZX7ImgSM from '../../../assets/home/mobile/image-speaker-zx7.jpg'
 
 
-export const MainContainer=Styled.main`
+export const MainContainer=Styled.div`
     display:flex;
     justify-content:center;
     padding:${SPACE.container};
@@ -50,7 +50,7 @@ export const MainSpeakerWrapper = Styled.div`
         background-size:170%;
     }
 `
-export const MainSpeakerImg = Styled.div`
+export const MainSpeakerImg = Styled.span`
     z-index:1;
     position:absolute;
     background:url(${props => props.imageSrc});
