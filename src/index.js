@@ -6,7 +6,7 @@ import { createStore } from 'redux';
 import throttle from 'lodash/throttle';
 import { allReducer } from './reducers';
 import { Provider } from 'react-redux';
-import { loadState, saveState } from './data/localStorage';
+import { loadState, saveState } from './reducers/localStorage';
 
 
 const persistedState = loadState();
