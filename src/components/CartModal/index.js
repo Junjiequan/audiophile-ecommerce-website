@@ -62,8 +62,8 @@ const Cart = () => {
     
     return (
         <CartModalContainer data-display={isModalToggle} data-container >
-            <CartModalWrapper data-container>
-                <Modal data-display={isModalToggle}>
+            <CartModalWrapper data-container >
+                <Modal data-display={isModalToggle} aria-labelledby="cart_button" aria-expanded={isModalToggle} id="cart_modal">
                     <FirstRow >
                         <Amount> Cart ({products.length})</Amount>
                         <RemoveBtn onClick={()=> dispatch(resProduct())}> Remove all</RemoveBtn>

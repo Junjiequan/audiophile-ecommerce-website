@@ -45,10 +45,10 @@ const Header = () => {
                     <LogoImg src={Logo} alt="audiophile logo"/>
                 </HeaderLogo>
                 <HeaderNav>
-                    <HeaderNavLink to="/" exact={true} data-active="active" aria-current={true} aria-label="link to home page">home</HeaderNavLink>
-                    <HeaderNavLink to="/headphones" exact={true} data-active="active" aria-current={true} aria-label="link to headphones page">headphones</HeaderNavLink>
-                    <HeaderNavLink to="/speakers" exact={true} data-active="active" aria-current={true} aria-label="link to speakers page">speakers</HeaderNavLink>
-                    <HeaderNavLink to="/earphones" exact={true} data-active="active" aria-current={true} aria-label="link to earphones page">earphones</HeaderNavLink>
+                    <HeaderNavLink to="/" exact={true} data-active="active" aria-current={true} >home</HeaderNavLink>
+                    <HeaderNavLink to="/headphones" exact={true} data-active="active" aria-current={true} >headphones</HeaderNavLink>
+                    <HeaderNavLink to="/speakers" exact={true} data-active="active" aria-current={true} >speakers</HeaderNavLink>
+                    <HeaderNavLink to="/earphones" exact={true} data-active="active" aria-current={true} >earphones</HeaderNavLink>
                 </HeaderNav>
                 {
                     isMobile && 
@@ -59,8 +59,15 @@ const Header = () => {
                 </MobNavWrapper>
 
                 }
-                <CartWrapper data-amount={itemAmount} onClick={()=>dispatch(toggleModal())}>
-                    <CartIcon src={CartImg} alt="cart icon image"/>
+                <CartWrapper 
+                    aria-label="button triggers shopping cart modal" 
+                    id="cart_button" 
+                    data-amount={itemAmount} 
+                    onClick={()=>dispatch(toggleModal())} 
+                    aria-haspopup="true" 
+                    aria-controls="cart_modal"
+                >
+                    <CartIcon src={CartImg} />
                 </CartWrapper>
             </HeaderWrapper>
         </HeaderContainer>
