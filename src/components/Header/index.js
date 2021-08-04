@@ -45,10 +45,10 @@ const Header = () => {
                     <LogoImg src={Logo} alt="audiophile logo"/>
                 </HeaderLogo>
                 <HeaderNav>
-                    <HeaderNavLink to="/" exact={true} data-active="active" aria-current={true} >home</HeaderNavLink>
-                    <HeaderNavLink to="/headphones" exact={true} data-active="active" aria-current={true} >headphones</HeaderNavLink>
-                    <HeaderNavLink to="/speakers" exact={true} data-active="active" aria-current={true} >speakers</HeaderNavLink>
-                    <HeaderNavLink to="/earphones" exact={true} data-active="active" aria-current={true} >earphones</HeaderNavLink>
+                    <HeaderNavLink to="/" exact={true} data-active="active" aria-current="page" >home</HeaderNavLink>
+                    <HeaderNavLink to="/headphones" exact={true} data-active="active" aria-current="page" >headphones</HeaderNavLink>
+                    <HeaderNavLink to="/speakers" exact={true} data-active="active" aria-current="page" >speakers</HeaderNavLink>
+                    <HeaderNavLink to="/earphones" exact={true} data-active="active" aria-current="page" >earphones</HeaderNavLink>
                 </HeaderNav>
                 {
                     isMobile && 

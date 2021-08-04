@@ -31,10 +31,10 @@ const Footer = () => {
                         <LogoImg src={Logo} alt="audiophile logo" />
                     </FooterLogo>
                     <FooterNav>
-                        <FooterNavLink to="/" exact={true} aria-label="link to home" data-active="active">home</FooterNavLink>
-                        <FooterNavLink to="/headphones" exact={true} aria-label="link to headphones" data-active="active">headphones</FooterNavLink>
-                        <FooterNavLink to="/speakers" exact={true} aria-label="link to speakers" data-active="active">speakers</FooterNavLink>
-                        <FooterNavLink to="/earphones" exact={true} aria-label="link to earphones" data-active="active">earphones</FooterNavLink>
+                        <FooterNavLink to="/" exact={true}  data-active="active" aria-current="page">home</FooterNavLink>
+                        <FooterNavLink to="/headphones" exact={true}  data-active="active" aria-current="page">headphones</FooterNavLink>
+                        <FooterNavLink to="/speakers" exact={true} data-active="active" aria-current="page">speakers</FooterNavLink>
+                        <FooterNavLink to="/earphones" exact={true}  data-active="active" aria-current="page">earphones</FooterNavLink>
                     </FooterNav>
                 </FooterLinks>
                 <FooterInfo>
