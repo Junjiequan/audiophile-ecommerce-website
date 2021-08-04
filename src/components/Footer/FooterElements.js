@@ -1,6 +1,38 @@
-import Styled from 'styled-components';
+import Styled,{ keyframes } from 'styled-components';
 import { COLORS,WIDTH,SPACE,TRANSITION,DEVICE } from '../../Constants'
 import { Link as LinkR, NavLink } from 'react-router-dom'
+
+const textAnim = {
+    bg_loop:keyframes`
+        0%{background-position:200% center;}
+        50%{background-position:0% center;}
+        100%{background-position:200% center;}
+    `,
+    jay_loop:keyframes`
+        0%{
+            background:white;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        25%{
+            background:yellow;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity:0.2;
+        }
+        50%{
+            background:cyan;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity:0.7;
+        }
+        75%{
+            background:purple;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    `
+}
 
 export const FooterContainer = Styled.footer`
     display:flex;
@@ -102,14 +134,6 @@ export const FooterEnder = Styled.div`
         flex-direction:column;
     }
 `
-export const CopyRight = Styled.p`
-    opacity:.5;
-    font-weight:700;
-    user-select:none;
-    @media screen and ${DEVICE.sm}{
-        margin-bottom:4.8rem;
-    }
-`
 export const FooterIcons = Styled.div`
     transform:translateY(-6.3rem);
     @media screen and ${DEVICE.md}{
@@ -126,4 +150,41 @@ export const FooterIcon = Styled.a`
     &:not(:last-of-type){
         margin-right:1.6rem;
     }
+`
+export const FooterSign = Styled.p`
+    font-weight:400;
+    font-size:1.4rem;
+    text-align:left;
+    user-select:none;
+    letter-spacing:.04rem;
+    line-height:2.5rem;
+    color:rgba(255,255,255,0.6);
+    & > a:first-of-type{
+        opacity:1;
+        color: red;
+        background: linear-gradient(to left, rgba(50, 169, 255, 1),rgba(188, 183, 152, 1),rgba(255, 197, 147, 1));
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: ${textAnim.bg_loop} 5s linear infinite;
+        margin-right:.5rem;
+    }
+    @media screen and (max-width:650px){
+        margin-top:2rem;
+        text-align:center;
+    }
+    @media screen and ${DEVICE.sm}{
+        margin-bottom:4.8rem;
+        display:flex;
+        flex-direction:column;
+    }
+`
+export const Sign = Styled.a`
+    text-transform: uppercase;
+    position:relative;
+    font-weight:700;
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: ${textAnim.jay_loop} 5s linear infinite;
 `

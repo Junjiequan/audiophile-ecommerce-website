@@ -15,7 +15,8 @@ import {
     FooterNavLink,
     FooterInfo,
     FooterEnder,
-    CopyRight,
+    FooterSign,
+    Sign,
     FooterIcons,
     FooterIcon
 } from './FooterElements'
@@ -43,7 +44,12 @@ const Footer = () => {
                     Come and visit our demo facility - we’re open 7 days a week.
                 </FooterInfo>
                 <FooterEnder>
-                    <CopyRight>Copyright 2021. All Rights Reserved</CopyRight>
+                    <FooterSign>
+                        Challenge By 
+                        <a href="https://www.frontendmentor.io/challenges" aria-label="to front end mentor page" rel="nofollow noopener noreferrer"> Front end mentor</a>
+                        Coded By
+                        <Sign href="https://www.jayyy.site/" aria-label="to Jay's portfolio website" rel="nofollow noopener noreferrer"> Jay 💪</Sign>
+                    </FooterSign>
                     <FooterIcons>
                         <FooterIcon href="#" rel="noopener noreferrer nofollow" aria-label="direct to facebook page"><FaFacebookSquare /></FooterIcon>
                         <FooterIcon href="#" rel="noopener noreferrer nofollow" aria-label="direct to instagram page"><FaInstagram /></FooterIcon>
