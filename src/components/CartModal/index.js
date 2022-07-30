@@ -27,7 +27,6 @@ const Cart = () => {
   const isModalToggle = useSelector((state) => state.modalToggle);
   const products = useSelector((state) => state.products.cartItems);
 
-  console.log('-----', products);
   const dispatch = useDispatch();
   isModalToggle ? disableBodyScroll(document) : enableBodyScroll(document);
 
@@ -43,7 +42,6 @@ const Cart = () => {
   }, [dispatch]);
 
   const displayItems = (item, index) => {
-    console.log(item);
     return (
       <Items key={index}>
         <ItemImg width='64' height='64' src={require(`../../assets/${item.cartImg}`).default} alt={item.cartImg} />
