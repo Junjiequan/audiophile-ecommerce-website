@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "CI": false,
+  "engines": {
+    "node": "^10 || ^12 || >=16"
+  },
   "homepage": "https://a331998513.github.io/audiophile-ecommerce-website/",
   "dependencies": {
     "@hookform/resolvers": "^2.6.1",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
     "aos": "^2.3.4",
     "body-scroll-lock": "^4.0.0-beta.0",
     "gh-pages": "^3.2.3",
